@@ -2124,3 +2124,13 @@ footer {
     }
 
 }
+.logo-link {
+    text-decoration: none;
+    color:inherit;
+    display:block;
+    cursor:pointer;
+}
+
+.logo-link:hover {
+    opacity:0.9;
+}
