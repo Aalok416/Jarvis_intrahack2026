@@ -1,364 +1,563 @@
-const express = require("express");
-const cors = require("cors");
+// =============================================
+// YatraKhoj Simple Backend
+// No Express
+// No npm packages required
+// =============================================
 
-const app = express();
-const PORT = 3000;
+const http = require("http");
 
-app.use(cors());
-app.use(express.json());
+const PORT = 5000;
 
 
-// =====================================================
-// TEST BACKEND
-// =====================================================
+// =============================================
+// Send JSON response
+// =============================================
 
-app.get("/api/health", function(req, res) {
+function sendJSON(res, statusCode, data) {
 
-    res.json({
-        success: true,
-        message: "YatraKhoj backend is running"
+    res.writeHead(statusCode, {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type"
     });
 
-});
+    res.end(
+        JSON.stringify(data)
+    );
+}
 
 
-// =====================================================
-// WEATHER API
-// =====================================================
+// =============================================
+// Create Server
+// =============================================
 
-app.get("/api/weather", async function(req, res) {
+const server = http.createServer(
+    async function(req, res) {
 
-    try {
+        // Allow browser CORS request
+        if (req.method === "OPTIONS") {
 
-        const place = req.query.place;
-
-        if (!place) {
-
-            return res.status(400).json({
-                success: false,
-                message: "Please provide a place name."
+            res.writeHead(204, {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+                "Access-Control-Allow-Headers": "Content-Type"
             });
 
+            return res.end();
         }
 
 
-        // Find latitude and longitude
-        const geoUrl =
-            "https://geocoding-api.open-meteo.com/v1/search?name=" +
-            encodeURIComponent(place) +
-            "&count=1&language=en&format=json";
+        const url = new URL(
+            req.url,
+            "http://localhost:" + PORT
+        );
 
 
-        const geoResponse = await fetch(geoUrl);
+        console.log(
+            req.method,
+            url.pathname
+        );
 
-        const geoData =
-            await geoResponse.json();
 
+        // =============================================
+        // HOME
+        // =============================================
 
         if (
-            !geoData.results ||
-            geoData.results.length === 0
+            req.method === "GET" &&
+            url.pathname === "/"
         ) {
 
-            return res.status(404).json({
-                success: false,
-                message: "Place not found."
-            });
-
+            return sendJSON(
+                res,
+                200,
+                {
+                    success: true,
+                    message: "YatraKhoj backend is working!"
+                }
+            );
         }
 
 
-        const location =
-            geoData.results[0];
+        // =============================================
+        // TEST
+        // =============================================
+
+        if (
+            req.method === "GET" &&
+            url.pathname === "/api/test"
+        ) {
+
+            return sendJSON(
+                res,
+                200,
+                {
+                    success: true,
+                    message: "API connection successful"
+                }
+            );
+        }
 
 
-        const latitude =
-            location.latitude;
+        // =============================================
+        // CURRENCY
+        // =============================================
 
-        const longitude =
-            location.longitude;
+        if (
+            req.method === "GET" &&
+            url.pathname === "/api/currency"
+        ) {
 
+            try {
 
-        // Get weather
-        const weatherUrl =
-
-            "https://api.open-meteo.com/v1/forecast" +
-
-            "?latitude=" + latitude +
-
-            "&longitude=" + longitude +
-
-            "&current=" +
-            "temperature_2m," +
-            "apparent_temperature," +
-            "relative_humidity_2m," +
-            "precipitation," +
-            "weather_code," +
-            "wind_speed_10m" +
-
-            "&daily=" +
-            "weather_code," +
-            "temperature_2m_max," +
-            "temperature_2m_min," +
-            "precipitation_probability_max" +
-
-            "&timezone=auto" +
-
-            "&forecast_days=5";
+                const from =
+                    (
+                        url.searchParams.get("from")
+                        || "USD"
+                    ).toUpperCase();
 
 
-        const weatherResponse =
-            await fetch(weatherUrl);
+                const to =
+                    (
+                        url.searchParams.get("to")
+                        || "NPR"
+                    ).toUpperCase();
 
 
-        const weatherData =
-            await weatherResponse.json();
+                const amount =
+                    Number(
+                        url.searchParams.get("amount")
+                        || 1
+                    );
 
 
-        res.json({
+                if (
+                    isNaN(amount) ||
+                    amount < 0
+                ) {
 
-            success: true,
-
-            place: location.name,
-
-            country: location.country,
-
-            latitude: latitude,
-
-            longitude: longitude,
-
-            current:
-                weatherData.current,
-
-            currentUnits:
-                weatherData.current_units,
-
-            daily:
-                weatherData.daily,
-
-            dailyUnits:
-                weatherData.daily_units
-
-        });
+                    return sendJSON(
+                        res,
+                        400,
+                        {
+                            success: false,
+                            message: "Invalid amount"
+                        }
+                    );
+                }
 
 
-    } catch(error) {
-
-        console.log(error);
-
-        res.status(500).json({
-
-            success: false,
-
-            message:
-                "Could not get weather information."
-
-        });
-
-    }
-
-});
+                const apiURL =
+                    "https://open.er-api.com/v6/latest/"
+                    + from;
 
 
-// =====================================================
-// CURRENCY API
-// =====================================================
-
-app.get("/api/currency", async function(req, res) {
-
-    try {
-
-        const from =
-            String(
-                req.query.from || "USD"
-            ).toUpperCase();
+                const response =
+                    await fetch(apiURL);
 
 
-        const to =
-            String(
-                req.query.to || "NPR"
-            ).toUpperCase();
+                const data =
+                    await response.json();
 
 
-        const amount =
-            Number(
-                req.query.amount || 1
+                if (
+                    data.result !== "success"
+                ) {
+
+                    return sendJSON(
+                        res,
+                        400,
+                        {
+                            success: false,
+                            message: "Currency API error"
+                        }
+                    );
+                }
+
+
+                const rate =
+                    data.rates[to];
+
+
+                if (!rate) {
+
+                    return sendJSON(
+                        res,
+                        400,
+                        {
+                            success: false,
+                            message: "Currency not supported"
+                        }
+                    );
+                }
+
+
+                const convertedAmount =
+                    amount * rate;
+
+
+                return sendJSON(
+                    res,
+                    200,
+                    {
+                        success: true,
+
+                        from: from,
+
+                        to: to,
+
+                        amount: amount,
+
+                        rate: rate,
+
+                        convertedAmount:
+                            Number(
+                                convertedAmount.toFixed(2)
+                            )
+                    }
+                );
+
+
+            } catch(error) {
+
+                console.log(
+                    "Currency error:",
+                    error
+                );
+
+
+                return sendJSON(
+                    res,
+                    500,
+                    {
+                        success: false,
+                        message: "Currency service failed"
+                    }
+                );
+            }
+        }
+
+
+        // =============================================
+        // WEATHER
+        // =============================================
+
+        if (
+            req.method === "GET" &&
+            url.pathname === "/api/weather"
+        ) {
+
+            try {
+
+                const place =
+                    url.searchParams.get("place");
+
+
+                if (!place) {
+
+                    return sendJSON(
+                        res,
+                        400,
+                        {
+                            success: false,
+                            message: "Please provide a place"
+                        }
+                    );
+                }
+
+
+                // -------------------------------------
+                // Find coordinates
+                // -------------------------------------
+
+                const geoURL =
+                    "https://geocoding-api.open-meteo.com/v1/search"
+                    + "?name="
+                    + encodeURIComponent(place)
+                    + "&count=1"
+                    + "&language=en"
+                    + "&format=json";
+
+
+                const geoResponse =
+                    await fetch(geoURL);
+
+
+                const geoData =
+                    await geoResponse.json();
+
+
+                if (
+                    !geoData.results ||
+                    geoData.results.length === 0
+                ) {
+
+                    return sendJSON(
+                        res,
+                        404,
+                        {
+                            success: false,
+                            message: "Place not found"
+                        }
+                    );
+                }
+
+
+                const location =
+                    geoData.results[0];
+
+
+                const latitude =
+                    location.latitude;
+
+
+                const longitude =
+                    location.longitude;
+
+
+                // -------------------------------------
+                // Weather
+                // -------------------------------------
+
+                const weatherURL =
+                    "https://api.open-meteo.com/v1/forecast"
+                    + "?latitude="
+                    + latitude
+                    + "&longitude="
+                    + longitude
+                    + "&current="
+                    + "temperature_2m,"
+                    + "relative_humidity_2m,"
+                    + "apparent_temperature,"
+                    + "precipitation,"
+                    + "wind_speed_10m"
+                    + "&timezone=auto";
+
+
+                const weatherResponse =
+                    await fetch(weatherURL);
+
+
+                const weatherData =
+                    await weatherResponse.json();
+
+
+                return sendJSON(
+                    res,
+                    200,
+                    {
+                        success: true,
+
+                        place:
+                            location.name,
+
+                        country:
+                            location.country,
+
+                        latitude:
+                            latitude,
+
+                        longitude:
+                            longitude,
+
+                        temperature:
+                            weatherData
+                            .current
+                            .temperature_2m,
+
+                        feelsLike:
+                            weatherData
+                            .current
+                            .apparent_temperature,
+
+                        humidity:
+                            weatherData
+                            .current
+                            .relative_humidity_2m,
+
+                        precipitation:
+                            weatherData
+                            .current
+                            .precipitation,
+
+                        windSpeed:
+                            weatherData
+                            .current
+                            .wind_speed_10m
+                    }
+                );
+
+
+            } catch(error) {
+
+                console.log(
+                    "Weather error:",
+                    error
+                );
+
+
+                return sendJSON(
+                    res,
+                    500,
+                    {
+                        success: false,
+                        message: "Weather service failed"
+                    }
+                );
+            }
+        }
+
+
+        // =============================================
+        // TRANSLATION
+        // =============================================
+
+        if (
+            req.method === "POST" &&
+            url.pathname === "/api/translate"
+        ) {
+
+            let body = "";
+
+
+            req.on(
+                "data",
+                function(chunk) {
+
+                    body += chunk;
+
+                }
             );
 
 
-        const apiUrl =
+            req.on(
+                "end",
+                async function() {
 
-            "https://open.er-api.com/v6/latest/" +
-            from;
+                    try {
 
-
-        const response =
-            await fetch(apiUrl);
-
-
-        const data =
-            await response.json();
+                        const data =
+                            JSON.parse(body);
 
 
-        if (data.result !== "success") {
-
-            return res.status(400).json({
-
-                success: false,
-
-                message:
-                    "Currency not supported."
-
-            });
-
-        }
+                        const text =
+                            data.text;
 
 
-        const rate =
-            data.rates[to];
+                        const from =
+                            data.from || "en";
 
 
-        const convertedAmount =
-            amount * rate;
+                        const to =
+                            data.to || "ne";
 
 
-        res.json({
+                        if (!text) {
 
-            success: true,
-
-            from: from,
-
-            to: to,
-
-            amount: amount,
-
-            rate: rate,
-
-            convertedAmount:
-                convertedAmount
-
-        });
+                            return sendJSON(
+                                res,
+                                400,
+                                {
+                                    success: false,
+                                    message: "Text is required"
+                                }
+                            );
+                        }
 
 
-    } catch(error) {
-
-        console.log(error);
-
-        res.status(500).json({
-
-            success: false,
-
-            message:
-                "Currency conversion failed."
-
-        });
-
-    }
-
-});
+                        const apiURL =
+                            "https://api.mymemory.translated.net/get"
+                            + "?q="
+                            + encodeURIComponent(text)
+                            + "&langpair="
+                            + encodeURIComponent(
+                                from + "|" + to
+                            );
 
 
-// =====================================================
-// TRANSLATION API
-// =====================================================
-
-app.post("/api/translate", async function(req, res) {
-
-    try {
-
-        const text =
-            String(
-                req.body.text || ""
-            ).trim();
+                        const response =
+                            await fetch(apiURL);
 
 
-        const from =
-            req.body.from || "en";
+                        const translationData =
+                            await response.json();
 
 
-        const to =
-            req.body.to || "ne";
+                        return sendJSON(
+                            res,
+                            200,
+                            {
+                                success: true,
+
+                                original:
+                                    text,
+
+                                translated:
+                                    translationData
+                                    .responseData
+                                    .translatedText
+                            }
+                        );
 
 
-        if (!text) {
+                    } catch(error) {
 
-            return res.status(400).json({
-
-                success: false,
-
-                message:
-                    "Enter text to translate."
-
-            });
-
-        }
+                        console.log(
+                            "Translation error:",
+                            error
+                        );
 
 
-        const apiUrl =
+                        return sendJSON(
+                            res,
+                            500,
+                            {
+                                success: false,
+                                message: "Translation failed"
+                            }
+                        );
+                    }
 
-            "https://api.mymemory.translated.net/get?q=" +
-
-            encodeURIComponent(text) +
-
-            "&langpair=" +
-
-            encodeURIComponent(
-                from + "|" + to
+                }
             );
 
 
-        const response =
-            await fetch(apiUrl);
+            return;
+        }
 
 
-        const data =
-            await response.json();
+        // =============================================
+        // ROUTE NOT FOUND
+        // =============================================
 
-
-        res.json({
-
-            success: true,
-
-            originalText:
-                text,
-
-            translatedText:
-                data.responseData.translatedText,
-
-            from: from,
-
-            to: to
-
-        });
-
-
-    } catch(error) {
-
-        console.log(error);
-
-        res.status(500).json({
-
-            success: false,
-
-            message:
-                "Translation failed."
-
-        });
+        return sendJSON(
+            res,
+            404,
+            {
+                success: false,
+                message: "Route not found"
+            }
+        );
 
     }
+);
 
-});
 
+// =============================================
+// Start Server
+// =============================================
 
-// =====================================================
-// START SERVER
-// =====================================================
+server.listen(
+    PORT,
+    function() {
 
-app.listen(PORT, function() {
+        console.log("");
+        console.log("==============================");
+        console.log("YatraKhoj Backend Running");
+        console.log("http://localhost:" + PORT);
+        console.log("==============================");
+        console.log("");
 
-    console.log(
-        "YatraKhoj backend running at http://localhost:" +
-        PORT
-    );
-
-});
+    }
+);
