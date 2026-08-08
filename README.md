@@ -4,7 +4,8 @@ This is repository
 
 1.Project Title 
 YatraKhoj
-2.Team Name & All Member Names (Jarvis)
+2.Team Name & All Member Names 
+(Jarvis)
 Arpit Rai
 Aalok Bhattarai 
 Anish Dhungana 
