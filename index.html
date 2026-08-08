@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YatraKhoj</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+
+      <div>
+
+        <div class="logo">
+          <h1><span>▲</span> YatraKhoj</h1>
+          <p>Discover. Explore. Experience.</p>
+        </div>
+
+        <div class="menu">
+
+          <button class="active">
+            🔍 Find Your Trip
+          </button>
+
+          <button>
+            📍 Discover Places
+          </button>
+
+          <button>
+            ♡ Travel Guides
+          </button>
+
+          <button>
+            🛡 Safety Info
+          </button>
+
+          <button>
+            ⓘ About Us
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="promo">
+
+        <div class="promo-icon">
+          🏕️
+        </div>
+
+        <h3>Explore hidden gems</h3>
+
+        <p>
+          Support local communities and experience real culture.
+        </p>
+
+        <button class="green-btn">
+          Learn More
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+      <!-- HERO SECTION -->
+      <section class="hero">
+
+        <h2>
+          Find your perfect trip 🍃
+        </h2>
+
+        <p>
+          Tell us what you love, we'll show you the best hidden gems.
+        </p>
+
+      </section>
+
+
+      <!-- FIND TRIP SECTION -->
+      <section class="finder card">
+
+        <h3>
+          <span>1.</span>
+          What do you love?
+        </h3>
+
+        <p>
+          Select your interests
+        </p>
+
+
+        <div class="interests">
+
+          <button
+            class="interest selected"
+            data-interest="Trekking"
+          >
+            🥾
+            <span>Trekking</span>
+          </button>
+
+
+          <button
+            class="interest selected"
+            data-interest="Lakes"
+          >
+            ⛵
+            <span>Lakes</span>
+          </button>
+
+
+          <button
+            class="interest selected"
+            data-interest="Nature"
+          >
+            🌲
+            <span>Nature</span>
+          </button>
+
+
+          <button
+            class="interest"
+            data-interest="Culture"
+          >
+            🏛
+            <span>Culture</span>
+          </button>
+
+
+          <button
+            class="interest"
+            data-interest="Food"
+          >
+            🍲
+            <span>Food</span>
+          </button>
+
+
+          <button
+            class="interest"
+            data-interest="Adventure"
+          >
+            🏔
+            <span>Adventure</span>
+          </button>
+
+
+          <button
+            class="interest"
+            data-interest="Wildlife"
+          >
+            🦌
+            <span>Wildlife</span>
+          </button>
+
+
+          <button
+            class="interest"
+            data-interest="Relaxation"
+          >
+            🧘
+            <span>Relaxation</span>
+          </button>
+
+        </div>
+
+
+        <!-- FILTERS -->
+        <div class="filters">
+
+          <div class="filter-group">
+
+            <label>
+              2. Duration
+            </label>
+
+            <select id="duration">
+
+              <option value="2">
+                2 Days
+              </option>
+
+              <option value="3" selected>
+                3 Days
+              </option>
+
+              <option value="4">
+                4 Days
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="filter-group">
+
+            <label>
+              3. Experience Level
+            </label>
+
+            <select id="experience">
+
+              <option>
+                Beginner
+              </option>
+
+              <option>
+                Intermediate
+              </option>
+
+              <option>
+                Advanced
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="filter-group">
+
+            <label>
+              4. Starting From
+            </label>
+
+            <select id="location">
+
+              <option>
+                Kathmandu
+              </option>
+
+              <option>
+                Pokhara
+              </option>
+
+              <option>
+                Chitwan
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <button
+            class="find-btn"
+            onclick="findTrip()"
+          >
+            Find My Trip →
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- RECOMMENDED TRIPS -->
+      <section class="recommendations card">
+
+        <div class="section-title">
+
+          <div>
+
+            <h3>
+              Recommended Trips For You
+            </h3>
+
+            <p id="recommendationText">
+              Based on your interests:
+              Trekking, Lakes, Nature
+            </p>
+
+          </div>
+
+          <button>
+            View All →
+          </button>
+
+        </div>
+
+
+        <div
+          class="trip-container"
+          id="tripContainer"
+        >
+        </div>
+
+      </section>
+
+
+      <!-- ITINERARY -->
+      <section class="itinerary card">
+
+        <h3 id="itineraryTitle">
+          Sample Itinerary:
+          Pokhara & Panchase
+        </h3>
+
+
+        <div class="days">
+
+          <div class="day">
+
+            <h4>
+              ☀ Day 1
+            </h4>
+
+            <strong>
+              Kathmandu → Pokhara
+            </strong>
+
+            <ul>
+
+              <li>
+                Travel to Pokhara
+              </li>
+
+              <li>
+                Lakeside exploration
+              </li>
+
+              <li>
+                Sunset at Phewa Lake
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <div class="day">
+
+            <h4>
+              🌲 Day 2
+            </h4>
+
+            <strong>
+              Panchase Trek
+            </strong>
+
+            <ul>
+
+              <li>
+                Drive to trailhead
+              </li>
+
+              <li>
+                Trek to Panchase
+              </li>
+
+              <li>
+                Village exploration
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <div class="day">
+
+            <h4>
+              ☀ Day 3
+            </h4>
+
+            <strong>
+              Pokhara Exploration
+            </strong>
+
+            <ul>
+
+              <li>
+                Visit Davis Falls
+              </li>
+
+              <li>
+                Boat ride
+              </li>
+
+              <li>
+                Return Kathmandu
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- RIGHT SIDEBAR -->
+    <aside class="right-sidebar">
+
+
+      <!-- SUMMARY -->
+      <section class="card summary">
+
+        <h3>
+          Your Trip Summary
+        </h3>
+
+
+        <img
+          id="summaryImage"
+          src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=500&q=80"
+          alt="Trip"
+        >
+
+
+        <h3 id="summaryName">
+          Pokhara & Panchase
+        </h3>
+
+
+        <p id="summaryDetails">
+          📅 3 Days |
+          Beginner
+        </p>
+
+
+        <div class="summary-stats">
+
+          <div>
+
+            <small>
+              Match
+            </small>
+
+            <strong id="summaryMatch">
+              95%
+            </strong>
+
+          </div>
+
+
+          <div>
+
+            <small>
+              Difficulty
+            </small>
+
+            <strong id="summaryDifficulty">
+              Easy
+            </strong>
+
+          </div>
+
+
+          <div>
+
+            <small>
+              Safety
+            </small>
+
+            <strong id="summarySafety">
+              High
+            </strong>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- BUDGET -->
+      <section class="card budget">
+
+        <h3>
+          Budget Estimate
+        </h3>
+
+
+        <div class="budget-row">
+
+          <span>
+            🚌 Transport
+          </span>
+
+          <span>
+            Rs. 2,500
+          </span>
+
+        </div>
+
+
+        <div class="budget-row">
+
+          <span>
+            🏨 Accommodation
+          </span>
+
+          <span>
+            Rs. 3,000
+          </span>
+
+        </div>
+
+
+        <div class="budget-row">
+
+          <span>
+            🍲 Food
+          </span>
+
+          <span>
+            Rs. 2,000
+          </span>
+
+        </div>
+
+
+        <div class="budget-row">
+
+          <span>
+            🎟 Activities
+          </span>
+
+          <span>
+            Rs. 1,500
+          </span>
+
+        </div>
+
+
+        <div class="budget-total">
+
+          <span>
+            Total
+          </span>
+
+          <strong>
+            Rs. 10,000
+          </strong>
+
+        </div>
+
+      </section>
+
+
+      <!-- SAFETY -->
+      <section class="card safety">
+
+        <h3>
+          Safety Overview
+        </h3>
+
+        <p>
+          ✅ Beginner Friendly
+        </p>
+
+        <p>
+          ✅ Good Trail Condition
+        </p>
+
+        <p>
+          ✅ Health Facility Nearby
+        </p>
+
+        <p>
+          ✅ Guide Not Compulsory
+        </p>
+
+        <p>
+          ⚠ Weather Can Change Quickly
+        </p>
+
+      </section>
+
+    </aside>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+images.unsplash.com
