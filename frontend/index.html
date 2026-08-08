@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YatraKhoj | Find Hidden. Go Local.</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="logo">
+                🏔
+            </div>
+
+            <div>
+                <h2>
+                    Yatra<span>Khoj</span>
+                </h2>
+
+                <p>
+                    Find Hidden. Go Local.
+                </p>
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <button
+                class="nav-btn active"
+                onclick="showPage('home', this)"
+            >
+                ⌂ Find Your Trip
+            </button>
+
+
+            <button
+                class="nav-btn"
+                onclick="showPage('discover', this)"
+            >
+                ⌖ Discover Places
+            </button>
+
+
+            <button
+                class="nav-btn"
+                onclick="showPage('guides', this)"
+            >
+                ☷ Travel Guides
+            </button>
+
+
+            <button
+                class="nav-btn"
+                onclick="showPage('safety', this)"
+            >
+                🛡 Safety Info
+            </button>
+
+
+            <button
+                class="nav-btn"
+                onclick="showPage('currency', this)"
+            >
+                ₨ Currency Converter
+            </button>
+
+
+            <button
+                class="nav-btn"
+                onclick="showPage('about', this)"
+            >
+                ◎ About Us
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-card">
+
+            <div class="sidebar-icon">
+                💎
+            </div>
+
+            <h3>
+                Hidden Nepal
+            </h3>
+
+            <p>
+                Discover famous destinations and places
+                most travelers overlook.
+            </p>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="main">
+
+
+        <!-- =================================================
+             HOME
+        ================================================== -->
+
+        <section
+            id="home"
+            class="page active"
+        >
+
+
+            <!-- HERO -->
+
+            <div class="hero">
+
+                <div class="hero-content">
+
+                    <span class="mini-title">
+                        🇳🇵 NEPAL, BEYOND THE OBVIOUS
+                    </span>
+
+
+                    <h1>
+                        Find the Nepal
+                        <span>
+                            you were looking for.
+                        </span>
+                    </h1>
+
+
+                    <p>
+                        From the eastern hills to Himalayan valleys,
+                        peaceful lakes and ancient heritage — discover
+                        places based on what you actually love.
+                    </p>
+
+
+                    <div class="hero-tags">
+
+                        <span>
+                            ✓ Hidden Gems
+                        </span>
+
+                        <span>
+                            ✓ Safety Information
+                        </span>
+
+                        <span>
+                            ✓ Accommodation
+                        </span>
+
+                        <span>
+                            ✓ Local Travel Guides
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TRIP FINDER
+            ================================================== -->
+
+            <div
+                class="home-container"
+                id="tripFinder"
+            >
+
+                <div class="section-heading">
+
+                    <span class="mini-title">
+                        BUILD YOUR TRIP
+                    </span>
+
+                    <h2>
+                        Find your perfect Nepal journey
+                    </h2>
+
+                    <p>
+                        Choose what you enjoy and search for
+                        the destination you want to visit.
+                    </p>
+
+                </div>
+
+
+
+                <div class="trip-box">
+
+
+                    <!-- INTERESTS -->
+
+                    <div class="step-title">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <div>
+                            <h3>
+                                What do you love?
+                            </h3>
+
+                            <p>
+                                Select one or more interests.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="interest-grid">
+
+                        <button
+                            class="interest"
+                            onclick="toggleInterest(this)"
+                        >
+                            <span>🥾</span>
+                            <strong>Trekking</strong>
+                            <small>Trails & mountains</small>
+                        </button>
+
+
+                        <button
+                            class="interest"
+                            onclick="toggleInterest(this)"
+                        >
+                            <span>🌊</span>
+                            <strong>Lakes</strong>
+                            <small>Water & views</small>
+                        </button>
+
+
+                        <button
+                            class="interest"
+                            onclick="toggleInterest(this)"
+                        >
+                            <span>🌿</span>
+                            <strong>Nature</strong>
+                            <small>Forests & scenery</small>
+                        </button>
+
+
+                        <button
+                            class="interest"
+                            onclick="toggleInterest(this)"
+                        >
+                            <span>🏯</span>
+                            <strong>Culture</strong>
+                            <small>History & heritage</small>
+                        </button>
+
+
+                        <button
+                            class="interest"
+                            onclick="toggleInterest(this)"
+                        >
+                            <span>🍜</span>
+                            <strong>Food</strong>
+                            <small>Local flavours</small>
+                        </button>
+
+
+                        <button
+                            class="interest"
+                            onclick="toggleInterest(this)"
+                        >
+                            <span>🪂</span>
+                            <strong>Adventure</strong>
+                            <small>Thrill & activities</small>
+                        </button>
+
+
+                        <button
+                            class="interest"
+                            onclick="toggleInterest(this)"
+                        >
+                            <span>💎</span>
+                            <strong>Hidden Gems</strong>
+                            <small>Less explored</small>
+                        </button>
+
+
+                        <button
+                            class="interest"
+                            onclick="toggleInterest(this)"
+                        >
+                            <span>🌄</span>
+                            <strong>Relaxation</strong>
+                            <small>Slow travel</small>
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- SEARCH -->
+
+                    <div class="step-title second-step">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <div>
+                            <h3>
+                                Search your journey
+                            </h3>
+
+                            <p>
+                                Your starting point is Itahari.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="trip-form">
+
+
+                        <div class="field">
+
+                            <label>
+                                Duration
+                            </label>
+
+                            <select id="duration">
+
+                                <option>
+                                    2 Days
+                                </option>
+
+                                <option>
+                                    3 Days
+                                </option>
+
+                                <option>
+                                    5 Days
+                                </option>
+
+                                <option>
+                                    7 Days
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="field">
+
+                            <label>
+                                Starting From
+                            </label>
+
+                            <select id="starting">
+
+                                <option value="Itahari">
+                                    Itahari
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="field destination-field">
+
+                            <label>
+                                Destination
+                            </label>
+
+                            <select
+                                id="destination"
+                                onchange="destinationChanged()"
+                            >
+
+                                <option value="">
+                                    Select Destination
+                                </option>
+
+                                <option value="tehrathum">
+                                    Tehrathum
+                                </option>
+
+                                <option value="taplejung">
+                                    Taplejung
+                                </option>
+
+                                <option value="ilam">
+                                    Ilam
+                                </option>
+
+                                <option value="pokhara">
+                                    Pokhara
+                                </option>
+
+                                <option value="lumbini">
+                                    Lumbini
+                                </option>
+
+                                <option value="chitwan">
+                                    Chitwan
+                                </option>
+
+                                <option value="kathmandu">
+                                    Kathmandu
+                                </option>
+
+                                <option value="mustang">
+                                    Mustang
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <button
+                            class="find-btn"
+                            onclick="findTrip()"
+                        >
+
+                            <small>
+                                SEARCH
+                            </small>
+
+                            <strong>
+                                Find My Trip →
+                            </strong>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SEARCH RESULT
+
+                 This appears ONLY after clicking Find My Trip
+            ================================================== -->
+
+            <div
+                id="searchResult"
+                class="home-container hidden"
+            >
+
+                <div class="section-heading">
+
+                    <span class="mini-title">
+                        SEARCH RESULT
+                    </span>
+
+                    <h2>
+                        We found your destination
+                    </h2>
+
+                    <p>
+                        Click the destination below to see safety,
+                        places, accommodation and important information.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="destinationCard"
+                    class="destination-result"
+                    onclick="openDestination()"
+                >
+
+                    <img
+                        id="destinationImage"
+                        src=""
+                        alt=""
+                    >
+
+
+                    <div class="destination-overlay">
+                    </div>
+
+
+                    <div class="destination-result-content">
+
+                        <div>
+
+                            <span
+                                id="destinationCategory"
+                                class="destination-badge"
+                            >
+                            </span>
+
+
+                            <h2 id="destinationName">
+                            </h2>
+
+
+                            <p id="destinationDescription">
+                            </p>
+
+
+                            <div class="destination-tags">
+
+                                <span>
+                                    📍 From Itahari
+                                </span>
+
+                                <span id="destinationDuration">
+                                    🕐 3 Days
+                                </span>
+
+                                <span id="destinationBest">
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="click-message">
+
+                            <small>
+                                CLICK DESTINATION
+                            </small>
+
+                            <strong>
+                                View Full Details →
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FULL DESTINATION DETAILS
+
+                 This appears ONLY after clicking result above
+            ================================================== -->
+
+            <div
+                id="destinationDetails"
+                class="home-container hidden"
+            >
+
+
+                <!-- IMPORTANT INFO -->
+
+                <div class="details-heading">
+
+                    <div>
+
+                        <span class="mini-title">
+                            YOUR JOURNEY
+                        </span>
+
+                        <h2 id="detailsName">
+                        </h2>
+
+                        <p id="detailsIntro">
+                        </p>
+
+                    </div>
+
+
+                    <span class="ready-badge">
+                        ✓ Travel Prepared
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="importantInfo"
+                    class="important-grid"
+                >
+                </div>
+
+
+
+                <!-- SAFETY -->
+
+                <div class="content-heading">
+
+                    <span class="mini-title">
+                        BEFORE YOU GO
+                    </span>
+
+                    <h2>
+                        Safety Measures
+                    </h2>
+
+                    <p>
+                        Important destination-specific things you
+                        should know before beginning your journey.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="homeSafety"
+                    class="safety-grid"
+                >
+                </div>
+
+
+
+                <!-- PLACES -->
+
+                <div class="content-heading">
+
+                    <span class="mini-title">
+                        DISCOVER
+                    </span>
+
+                    <h2>
+                        Places to Visit
+                    </h2>
+
+                    <p>
+                        Popular attractions together with
+                        underrated places.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="homePlaces"
+                    class="place-grid"
+                >
+                </div>
+
+
+
+                <!-- ACCOMMODATION -->
+
+                <div class="content-heading">
+
+                    <span class="mini-title">
+                        WHERE TO STAY
+                    </span>
+
+                    <h2>
+                        Accommodation
+                    </h2>
+
+                    <p>
+                        Approximate accommodation categories and
+                        price ranges for planning your budget.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="homeHotels"
+                    class="hotel-grid"
+                >
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DISCOVER PLACES
+        ================================================== -->
+
+        <section
+            id="discover"
+            class="page"
+        >
+
+            <div class="page-header">
+
+                <span class="mini-title">
+                    DISCOVER NEPAL
+                </span>
+
+                <h1>
+                    Famous places.
+                    Hidden places.
+                </h1>
+
+                <p>
+                    Click a destination to explore its attractions
+                    and accommodation.
+                </p>
+
+            </div>
+
+
+            <div class="page-container">
+
+                <div
+                    id="discoverGrid"
+                    class="discover-grid"
+                >
+                </div>
+
+
+                <div
+                    id="discoverDetails"
+                    class="hidden"
+                >
+
+                    <div class="content-heading">
+
+                        <span class="mini-title">
+                            DESTINATION
+                        </span>
+
+                        <h2 id="discoverTitle">
+                        </h2>
+
+                        <p id="discoverText">
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        id="discoverPlaces"
+                        class="place-grid"
+                    >
+                    </div>
+
+
+
+                    <div class="content-heading">
+
+                        <span class="mini-title">
+                            ACCOMMODATION
+                        </span>
+
+                        <h2>
+                            Where to Stay
+                        </h2>
+
+                    </div>
+
+
+                    <div
+                        id="discoverHotels"
+                        class="hotel-grid"
+                    >
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             TRAVEL GUIDES
+        ================================================== -->
+
+        <section
+            id="guides"
+            class="page"
+        >
+
+            <div class="page-header">
+
+                <span class="mini-title">
+                    PLAN BETTER
+                </span>
+
+                <h1>
+                    Travel Guides
+                </h1>
+
+                <p>
+                    Select a destination for route, season,
+                    food and local experience suggestions.
+                </p>
+
+            </div>
+
+
+            <div class="page-container guide-layout">
+
+                <div class="guide-menu">
+
+                    <h3>
+                        Destinations
+                    </h3>
+
+                    <div id="guideButtons">
+                    </div>
+
+                </div>
+
+
+                <div id="guideContent">
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SAFETY INFO
+        ================================================== -->
+
+        <section
+            id="safety"
+            class="page"
+        >
+
+            <div class="page-header">
+
+                <span class="mini-title">
+                    TRAVEL SMART
+                </span>
+
+                <h1>
+                    Safety Information
+                </h1>
+
+                <p>
+                    Check altitude, weather, transportation,
+                    mobile connection and healthcare before travelling.
+                </p>
+
+            </div>
+
+
+            <div class="page-container">
+
+
+                <div class="safety-selector">
+
+                    <div>
+
+                        <span class="mini-title">
+                            SELECT PLACE
+                        </span>
+
+                        <h2>
+                            Where are you travelling?
+                        </h2>
+
+                    </div>
+
+
+                    <select
+                        id="safetyDestination"
+                        onchange="loadSafetyPage()"
+                    >
+
+                        <option value="tehrathum">
+                            Tehrathum
+                        </option>
+
+                        <option value="taplejung">
+                            Taplejung
+                        </option>
+
+                        <option value="ilam">
+                            Ilam
+                        </option>
+
+                        <option value="pokhara">
+                            Pokhara
+                        </option>
+
+                        <option value="lumbini">
+                            Lumbini
+                        </option>
+
+                        <option value="chitwan">
+                            Chitwan
+                        </option>
+
+                        <option value="kathmandu">
+                            Kathmandu
+                        </option>
+
+                        <option value="mustang">
+                            Mustang
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="content-heading">
+
+                    <h2 id="safetyTitle">
+                    </h2>
+
+                    <p id="safetyText">
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="safetyGrid"
+                    class="safety-grid"
+                >
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CURRENCY
+        ================================================== -->
+
+        <section
+            id="currency"
+            class="page"
+        >
+
+            <div class="page-header">
+
+                <span class="mini-title">
+                    TRAVEL MONEY
+                </span>
+
+                <h1>
+                    Currency Converter
+                </h1>
+
+                <p>
+                    Convert common international currencies
+                    into Nepalese Rupees.
+                </p>
+
+            </div>
+
+
+            <div class="page-container">
+
+
+                <div class="converter">
+
+                    <span class="mini-title">
+                        CONVERT TO NPR
+                    </span>
+
+                    <h2>
+                        Nepalese Rupees 🇳🇵
+                    </h2>
+
+
+                    <div class="converter-form">
+
+
+                        <div class="field">
+
+                            <label>
+                                Amount
+                            </label>
+
+                            <input
+                                id="currencyAmount"
+                                type="number"
+                                value="1"
+                                min="0"
+                                oninput="convertCurrency()"
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                From Currency
+                            </label>
+
+                            <select
+                                id="currencyType"
+                                onchange="convertCurrency()"
+                            >
+
+                                <option value="USD">
+                                    🇺🇸 USA - USD
+                                </option>
+
+                                <option value="GBP">
+                                    🇬🇧 UK - GBP
+                                </option>
+
+                                <option value="INR">
+                                    🇮🇳 India - INR
+                                </option>
+
+                                <option value="CNY">
+                                    🇨🇳 China - CNY
+                                </option>
+
+                                <option value="AED">
+                                    🇦🇪 Dubai / UAE - AED
+                                </option>
+
+                                <option value="MYR">
+                                    🇲🇾 Malaysia - MYR
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="currency-result">
+
+                        <small>
+                            ESTIMATED VALUE
+                        </small>
+
+                        <h2 id="currencyResult">
+                            NPR 0
+                        </h2>
+
+                        <p id="rateText">
+                        </p>
+
+                    </div>
+
+
+                    <p class="demo-warning">
+                        Demo exchange rates only.
+                        Connect a live currency API later
+                        for real-time conversion.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
+
+        <section
+            id="about"
+            class="page"
+        >
+
+            <div class="page-header">
+
+                <span class="mini-title">
+                    OUR STORY
+                </span>
+
+                <h1>
+                    About YatraKhoj
+                </h1>
+
+                <p>
+                    A Nepal-focused tourism discovery platform
+                    built by Team Jarvis.
+                </p>
+
+            </div>
+
+
+            <div class="page-container">
+
+
+                <div class="about-card">
+
+                    <div class="nepal-icon">
+                        🇳🇵
+                    </div>
+
+
+                    <div>
+
+                        <span class="mini-title">
+                            WHY YATRAKHOJ?
+                        </span>
+
+                        <h2>
+                            Find Hidden.
+                            <span>
+                                Go Local.
+                            </span>
+                        </h2>
+
+
+                        <p>
+                            Travelers often need to search Google,
+                            watch multiple YouTube videos and read
+                            different blogs before understanding a
+                            destination.
+                        </p>
+
+
+                        <p>
+                            YatraKhoj brings destinations, hidden places,
+                            accommodation, travel guidance, safety
+                            information and currency conversion into
+                            one Nepal-focused experience.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="team-heading">
+
+                    <span class="mini-title">
+                        TEAM JARVIS
+                    </span>
+
+                    <h2>
+                        Meet the Team
+                    </h2>
+
+                </div>
+
+
+                <div class="team-grid">
+
+
+                    <div class="member">
+
+                        <div class="avatar">
+                            AR
+                        </div>
+
+                        <h3>
+                            Arpit Rai
+                        </h3>
+
+                        <p>
+                            Team Jarvis
+                        </p>
+
+                    </div>
+
+
+                    <div class="member">
+
+                        <div class="avatar">
+                            AB
+                        </div>
+
+                        <h3>
+                            Aalok Bhattarai
+                        </h3>
+
+                        <p>
+                            Team Jarvis
+                        </p>
+
+                    </div>
+
+
+                    <div class="member">
+
+                        <div class="avatar">
+                            AD
+                        </div>
+
+                        <h3>
+                            Anish Dhungana
+                        </h3>
+
+                        <p>
+                            Team Jarvis
+                        </p>
+
+                    </div>
+
+
+                    <div class="member">
+
+                        <div class="avatar">
+                            PK
+                        </div>
+
+                        <h3>
+                            Pratik Karki
+                        </h3>
+
+                        <p>
+                            Team Jarvis
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            YatraKhoj • Find Hidden. Go Local. • Team Jarvis
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
