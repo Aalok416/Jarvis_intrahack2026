@@ -1,0 +1,41 @@
+{
+    "arrivalsByYear": [
+        { "year": 2019, "value": 1186567, "label": "2019" },
+        { "year": 2020, "value": 230085, "label": "2020" },
+        { "year": 2021, "value": 150625, "label": "2021" },
+        { "year": 2022, "value": 614148, "label": "2022" },
+        { "year": 2023, "value": 1010000, "label": "2023" },
+        { "year": 2024, "value": 1147567, "label": "2024" },
+        { "year": 2025, "value": 1158459, "label": "2025" }
+    ],
+    "seasonality": [
+        { "month": "Jan", "value": 4 },
+        { "month": "Feb", "value": 5 },
+        { "month": "Mar", "value": 9 },
+        { "month": "Apr", "value": 10 },
+        { "month": "May", "value": 8 },
+        { "month": "Jun", "value": 6 },
+        { "month": "Jul", "value": 5 },
+        { "month": "Aug", "value": 5 },
+        { "month": "Sep", "value": 8 },
+        { "month": "Oct", "value": 12 },
+        { "month": "Nov", "value": 11 },
+        { "month": "Dec", "value": 8 }
+    ],
+    "sourceMarkets": [
+        { "country": "India", "value": 33 },
+        { "country": "China", "value": 6 },
+        { "country": "USA", "value": 8 },
+        { "country": "Bangladesh", "value": 7 },
+        { "country": "UK", "value": 4 },
+        { "country": "Australia", "value": 3 },
+        { "country": "Other", "value": 39 }
+    ],
+    "insights": [
+        { "label": "Avg stay in 2025", "value": "16.3", "unit": "days" },
+        { "label": "Daily spend", "value": "$33", "unit": "/day" },
+        { "label": "2025 arrivals", "value": "1.16M", "unit": "visitors" },
+        { "label": "Recovery vs 2019", "value": "97%", "unit": "of peak" }
+    ],
+    "takeaway": "Nepal is recovering in volume but not value — daily spend is well below the $100–150 regional average. The single biggest lever is better data and smarter redistribution of travellers."
+}
