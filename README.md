@@ -65,3 +65,7 @@ Features:
 7. AI Tools Used mandatory if any AI coding tools were used (see Technology Policy) 
 Chat gpt, Claude Ai, Gemini
 8. Demo Link or Screenshots
+=======
+# jarvis_intraahack2026
+This is project repository for hackathon
+>>>>>>> af92ccb4887f13c2ff971404e954c5e522bf4c27
