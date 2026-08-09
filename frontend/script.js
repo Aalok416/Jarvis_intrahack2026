@@ -58,6 +58,21 @@ const destinations = {
             activities: 200
         },
 
+        crowdLevel: "low",
+
+        bestSeason:
+            "Oct–Nov, Mar–May",
+
+        difficulty: "easy",
+
+        hiddenAlt: "",
+
+        fairCosts: {
+            guidePerDay: 3500,
+            porterPerDay: 2500,
+            porterLoadKg: 25
+        },
+
         safetyLevels: {
             altitude: "medium",
             weather: "medium",
@@ -278,6 +293,21 @@ const destinations = {
             lodging: 2000,
             food: 800,
             activities: 400
+        },
+
+        crowdLevel: "low",
+
+        bestSeason:
+            "Oct–Nov, Apr–May",
+
+        difficulty: "challenging",
+
+        hiddenAlt: "Kanchenjunga Base Camp",
+
+        fairCosts: {
+            guidePerDay: 4500,
+            porterPerDay: 2800,
+            porterLoadKg: 20
         },
 
         safetyLevels: {
@@ -502,6 +532,21 @@ const destinations = {
             activities: 300
         },
 
+        crowdLevel: "low",
+
+        bestSeason:
+            "Mar–May, Oct–Nov",
+
+        difficulty: "easy",
+
+        hiddenAlt: "",
+
+        fairCosts: {
+            guidePerDay: 3500,
+            porterPerDay: 2500,
+            porterLoadKg: 25
+        },
+
         safetyLevels: {
             altitude: "medium",
             weather: "medium",
@@ -723,6 +768,21 @@ const destinations = {
             lodging: 3000,
             food: 1000,
             activities: 1500
+        },
+
+        crowdLevel: "high",
+
+        bestSeason:
+            "Oct–Nov, Mar–Apr",
+
+        difficulty: "easy",
+
+        hiddenAlt: "Begnas & Rupa Lake",
+
+        fairCosts: {
+            guidePerDay: 4000,
+            porterPerDay: 2500,
+            porterLoadKg: 25
         },
 
         safetyLevels: {
@@ -950,6 +1010,21 @@ const destinations = {
             activities: 300
         },
 
+        crowdLevel: "medium",
+
+        bestSeason:
+            "Oct–Mar",
+
+        difficulty: "easy",
+
+        hiddenAlt: "Kapilvastu & Tilaurakot",
+
+        fairCosts: {
+            guidePerDay: 3500,
+            porterPerDay: 2500,
+            porterLoadKg: 25
+        },
+
         safetyLevels: {
             altitude: "low",
             weather: "high",
@@ -1168,6 +1243,21 @@ const destinations = {
             lodging: 3000,
             food: 1000,
             activities: 2000
+        },
+
+        crowdLevel: "high",
+
+        bestSeason:
+            "Oct–Mar",
+
+        difficulty: "easy",
+
+        hiddenAlt: "Bardia National Park",
+
+        fairCosts: {
+            guidePerDay: 4000,
+            porterPerDay: 2500,
+            porterLoadKg: 25
         },
 
         safetyLevels: {
@@ -1389,6 +1479,21 @@ const destinations = {
             lodging: 2500,
             food: 1200,
             activities: 800
+        },
+
+        crowdLevel: "high",
+
+        bestSeason:
+            "Oct–Nov, Mar–Apr",
+
+        difficulty: "easy",
+
+        hiddenAlt: "Patan & Bhaktapur",
+
+        fairCosts: {
+            guidePerDay: 3500,
+            porterPerDay: 2500,
+            porterLoadKg: 25
         },
 
         safetyLevels: {
@@ -1613,6 +1718,21 @@ const destinations = {
             activities: 500
         },
 
+        crowdLevel: "medium",
+
+        bestSeason:
+            "Mar–May, Sep–Nov",
+
+        difficulty: "challenging",
+
+        hiddenAlt: "Nar-Phu Valley",
+
+        fairCosts: {
+            guidePerDay: 4500,
+            porterPerDay: 2800,
+            porterLoadKg: 20
+        },
+
         safetyLevels: {
             altitude: "high",
             weather: "high",
@@ -1804,6 +1924,85 @@ const destinations = {
 
 
 /* =========================================================
+   UNDERRATED NEPAL
+
+   Off-the-beaten-path destinations to redistribute travel
+   away from overcrowded classic routes (anti-overtourism).
+========================================================= */
+
+const underratedRegions = [
+
+    {
+        key: "bardia",
+        name: "Bardia National Park",
+        region: "Far West",
+        crowdLevel: "low",
+        difficulty: "easy",
+        bestSeason: "Oct–Mar",
+        description: "Nepal's wildest national park — Bengal tigers, wild elephants and empty trails. The uncrowded answer to Chitwan.",
+        replace: "Chitwan"
+    },
+
+    {
+        key: "langtang",
+        name: "Langtang Valley",
+        region: "Central Himalaya",
+        crowdLevel: "low",
+        difficulty: "moderate",
+        bestSeason: "Mar–May, Sep–Nov",
+        description: "A short, stunning Himalayan valley an hour from Kathmandu with glacier views and quiet teahouse trails.",
+        replace: "Everest Base Camp"
+    },
+
+    {
+        key: "kanchenjunga",
+        name: "Kanchenjunga Region",
+        region: "Far East",
+        crowdLevel: "low",
+        difficulty: "challenging",
+        bestSeason: "Mar–May, Oct–Nov",
+        description: "Nepal's wildest and most remote trek around the world's third-highest peak. Permit-restricted and unforgettable.",
+        replace: "Annapurna Circuit"
+    },
+
+    {
+        key: "karnali",
+        name: "Karnali River & Jumla",
+        region: "Karnali",
+        crowdLevel: "low",
+        difficulty: "moderate",
+        bestSeason: "Oct–Nov, Feb–Apr",
+        description: "Nepal's least-visited province — whitewater rafting, apple orchards and a genuinely undiscovered culture.",
+        replace: "Mustang"
+    },
+
+    {
+        key: "begnas",
+        name: "Begnas & Rupa Lake",
+        region: "Pokhara Valley",
+        crowdLevel: "low",
+        difficulty: "easy",
+        bestSeason: "Oct–Apr",
+        description: "Peaceful lakes 20 minutes from Lakeside Pokhara. Sunrise paddles, terraced villages and almost no tourists.",
+        replace: "Pokhara Lakeside"
+    },
+
+    {
+        key: "kapilvastu",
+        name: "Kapilvastu & Tilaurakot",
+        region: "Western Terai",
+        crowdLevel: "low",
+        difficulty: "easy",
+        bestSeason: "Oct–Mar",
+        description: "The archaeological heartland of Buddha's early life — quiet ruins and village life near the Indian border.",
+        replace: "Lumbini"
+    }
+
+];
+
+
+
+/* =========================================================
    ACCOMMODATION PHOTOS
 
    These are intentionally generic hotel/lodge photos because
@@ -1936,6 +2135,66 @@ function showPage(pageName, button) {
         top: 0,
         behavior: "smooth"
     });
+
+
+    document.body.classList.remove(
+        "sidebar-open"
+    );
+
+    const sidebar =
+        document.querySelector(
+            ".sidebar"
+        );
+
+    if (sidebar) {
+
+        sidebar.classList.remove(
+            "open"
+        );
+
+    }
+
+    const menuBtn =
+        document.getElementById(
+            "menuBtn"
+        );
+
+    if (menuBtn) {
+
+        menuBtn.textContent = "☰";
+
+    }
+
+
+    if (pageName === "home") {
+
+        applyPrefsToTripFinder();
+
+    } else if (pageName === "discover") {
+
+        renderUnderrated();
+
+    } else if (pageName === "safety") {
+
+        loadSafetyPage();
+
+        loadReports();
+
+        setTimeout(function() {
+
+            if (reportMap) {
+
+                reportMap.invalidateSize();
+
+            }
+
+        }, 150);
+
+    } else if (pageName === "insights") {
+
+        loadTrends();
+
+    }
 
 }
 
@@ -2073,10 +2332,115 @@ function scoreDestination(key, plan) {
         : plan.days / place.minDays;
 
 
+    const difficultyOrder = [
+        "easy",
+        "moderate",
+        "challenging"
+    ];
+
+    let difficultyScore = 1;
+
+    if (
+        plan.difficulty &&
+        plan.difficulty !== "any"
+    ) {
+
+        const target =
+            difficultyOrder.indexOf(
+                plan.difficulty
+            );
+
+        const actual =
+            difficultyOrder.indexOf(
+                place.difficulty || "easy"
+            );
+
+        if (actual !== -1) {
+
+            const gap = Math.abs(
+                target - actual
+            );
+
+            difficultyScore =
+                gap === 0
+                ? 1
+                : (gap === 1 ? 0.75 : 0.5);
+
+        }
+
+    }
+
+
+    let crowdScore = 1;
+
+    if (plan.avoidCrowd) {
+
+        if (place.crowdLevel === "low") {
+
+            crowdScore = 1;
+
+        } else if (
+            place.crowdLevel === "medium"
+        ) {
+
+            crowdScore = 0.85;
+
+        } else {
+
+            crowdScore = 0.6;
+
+        }
+
+    }
+
+
+    let tripTypeScore = 1;
+
+    if (
+        plan.travelerType &&
+        plan.travelerType !== "any"
+    ) {
+
+        if (plan.travelerType === "women") {
+
+            tripTypeScore =
+                (
+                    place.crowdLevel === "low" &&
+                    place.difficulty === "easy"
+                )
+                ? 1
+                : 0.8;
+
+        } else if (
+            plan.travelerType === "family"
+        ) {
+
+            tripTypeScore =
+                place.difficulty === "easy"
+                ? 1
+                : 0.7;
+
+        } else if (
+            plan.travelerType === "solo"
+        ) {
+
+            tripTypeScore =
+                place.crowdLevel === "low"
+                ? 1
+                : 0.85;
+
+        }
+
+    }
+
+
     const total =
-        (interestScore * 0.6)
-        + (budgetScore * 0.3)
-        + (durationScore * 0.1);
+        (interestScore * 0.55)
+        + (budgetScore * 0.2)
+        + (durationScore * 0.1)
+        + (difficultyScore * 0.08)
+        + (crowdScore * 0.05)
+        + (tripTypeScore * 0.02);
 
 
     return {
@@ -2084,7 +2448,10 @@ function scoreDestination(key, plan) {
         place: place,
         score: total,
         budgetScore: budgetScore,
-        perDay: perDay
+        perDay: perDay,
+        difficultyScore: difficultyScore,
+        crowdScore: crowdScore,
+        tripTypeScore: tripTypeScore
     };
 
 }
@@ -2116,12 +2483,30 @@ function findTrip() {
             .value || 0
         );
 
+    const difficulty =
+        document
+        .getElementById("difficulty")
+        .value;
+
+    const travelerType =
+        document
+        .getElementById("travelerType")
+        .value;
+
+    const avoidCrowd =
+        document
+        .getElementById("avoidCrowd")
+        .checked;
+
 
     const plan = {
         interests: interests,
         days: days,
         starting: starting,
-        budget: budget
+        budget: budget,
+        difficulty: difficulty,
+        travelerType: travelerType,
+        avoidCrowd: avoidCrowd
     };
 
     lastTripPlan = plan;
@@ -2192,6 +2577,105 @@ function findTrip() {
 /* =========================================================
    RENDER RANKED RESULTS
 ========================================================= */
+
+function difficultyLabel(d) {
+
+    const dict = {
+
+        easy: {
+            en: "Easy",
+            ne: "सजिलो"
+        },
+
+        moderate: {
+            en: "Moderate",
+            ne: "मध्यम"
+        },
+
+        challenging: {
+            en: "Challenging",
+            ne: "कठिन"
+        }
+
+    };
+
+    const entry =
+        dict[d] || dict.easy;
+
+    return entry[currentLang] ||
+        entry.en;
+
+}
+
+
+function crowdLabel(c) {
+
+    const dict = {
+
+        low: {
+            en: "Low crowd",
+            ne: "भीड कम"
+        },
+
+        medium: {
+            en: "Moderate crowd",
+            ne: "सामान्य भीड"
+        },
+
+        high: {
+            en: "Busy",
+            ne: "भीडभाड"
+        }
+
+    };
+
+    const entry =
+        dict[c] || dict.medium;
+
+    return entry[currentLang] ||
+        entry.en;
+
+}
+
+
+function travelerTypeLabel(t) {
+
+    const dict = {
+
+        solo: {
+            en: "Solo",
+            ne: "एक्लै"
+        },
+
+        couple: {
+            en: "Couple",
+            ne: "जोडी"
+        },
+
+        family: {
+            en: "Family",
+            ne: "परिवार"
+        },
+
+        women: {
+            en: "Women",
+            ne: "महिला"
+        },
+
+        friends: {
+            en: "Friends",
+            ne: "साथीहरू"
+        }
+
+    };
+
+    const entry =
+        dict[t] || { en: "", ne: "" };
+
+    return entry[currentLang] ||
+        entry.en;
+
+}
 
 function renderResults(results, plan) {
 
@@ -2269,6 +2753,43 @@ function renderResults(results, plan) {
             }
 
 
+            if (plan.avoidCrowd) {
+
+                if (item.place.crowdLevel === "low") {
+
+                    reasons.push(
+                        "🧘 Quieter destination"
+                    );
+
+                } else if (
+                    item.place.hiddenAlt
+                ) {
+
+                    reasons.push(
+                        "🔄 Try instead: " +
+                        item.place.hiddenAlt
+                    );
+
+                }
+
+            }
+
+
+            if (
+                plan.travelerType &&
+                plan.travelerType !== "any"
+            ) {
+
+                reasons.push(
+                    "🧳 Great for " +
+                    travelerTypeLabel(
+                        plan.travelerType
+                    )
+                );
+
+            }
+
+
             container.innerHTML += `
 
                 <div class="result-card">
@@ -2336,9 +2857,17 @@ function renderResults(results, plan) {
                                 ${item.place.best}
                             </span>
 
+                            <span class="chip chip-${item.place.difficulty}">
+                                ${difficultyLabel(item.place.difficulty)}
+                            </span>
+
+                            <span class="crowd-badge crowd-${item.place.crowdLevel}">
+                                ${crowdLabel(item.place.crowdLevel)}
+                            </span>
+
                             ${
                                 plan.budget > 0
-                                ? `<span>💰 ~NPR ${Math.round(item.perDay).toLocaleString()}/day</span>`
+                                ? `<span>💰 ~${formatCost(item.perDay)}/day</span>`
                                 : ""
                             }
 
@@ -2422,6 +2951,10 @@ function openDestination(key) {
     renderSafety(
         place,
         "homeSafety"
+    );
+
+    renderHireFair(
+        place
     );
 
     renderPlaces(
@@ -2675,6 +3208,111 @@ function renderSafety(
 
 
 /* =========================================================
+   HIRE FAIR
+
+   Responsible-hiring guidance for guides, porters and
+   drivers — fair daily rates and porter load limits.
+========================================================= */
+
+function renderHireFair(place) {
+
+    const container =
+        document.getElementById(
+            "homeHireFair"
+        );
+
+    if (!container) {
+
+        return;
+
+    }
+
+
+    const costs =
+        place.fairCosts ||
+        {
+            guidePerDay: 3500,
+            porterPerDay: 2500,
+            porterLoadKg: 25
+        };
+
+
+    const cards = [
+
+        {
+            icon: "🥾",
+            title: "Guide",
+            detail: (
+                "Fair daily rate " +
+                formatCost(costs.guidePerDay)
+            ),
+            tip: "Verify your guide is licensed (TAAN/NMA) and agree the full itinerary and cost in writing before you start."
+        },
+
+        {
+            icon: "🎒",
+            title: "Porter",
+            detail: (
+                "Fair daily rate " +
+                formatCost(costs.porterPerDay)
+            ),
+            tip: (
+                "International mountaineering rules cap loads at " +
+                costs.porterLoadKg +
+                " kg. Never ask a porter to carry more — pay porter insurance too."
+            )
+        },
+
+        {
+            icon: "🚐",
+            title: "Driver",
+            detail: (
+                "Agree fares before boarding"
+            ),
+            tip: "Use metered taxis or agree the price first. Tip for long mountain drives, and only book registered vehicles."
+        }
+
+    ];
+
+
+    const html =
+        cards.map(function(card) {
+
+            return `
+
+                <div class="fair-card">
+
+                    <div class="fair-icon">
+                        ${card.icon}
+                    </div>
+
+                    <h3>
+                        ${card.title}
+                    </h3>
+
+                    <div class="fair-detail">
+                        ${card.detail}
+                    </div>
+
+                    <p class="fair-tip">
+                        ${card.tip}
+                    </p>
+
+                </div>
+
+            `;
+
+        }).join("");
+
+
+    container.innerHTML =
+        html;
+
+}
+
+
+
+/* =========================================================
    PLACES
 ========================================================= */
 
@@ -2859,21 +3497,79 @@ function imgFallback(img) {
    BACKEND API HELPERS
 ========================================================= */
 
-const API_BASE =
-    "http://localhost:5000";
+const API_BASE = "";
 
 
 function apiGet(path, fallback) {
 
+    const controller = new AbortController();
+
+    const timer = setTimeout(
+        function() {
+            controller.abort();
+        },
+        10000
+    );
+
     return fetch(
-        API_BASE + path
+        API_BASE + path,
+        { credentials: "same-origin", signal: controller.signal }
     )
     .then(function(response) {
         return response.json();
     })
     .catch(function() {
         return fallback;
+    })
+    .finally(function() {
+        clearTimeout(timer);
     });
+
+}
+
+
+function apiPost(path, data) {
+
+    const controller = new AbortController();
+
+    const timer = setTimeout(
+        function() {
+            controller.abort();
+        },
+        10000
+    );
+
+    return fetch(
+        API_BASE + path,
+        {
+            method: "POST",
+            credentials: "same-origin",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+            signal: controller.signal
+        }
+    )
+    .then(function(response) {
+        return response.json();
+    })
+    .catch(function() {
+        return { success: false, message: "Network error" };
+    })
+    .finally(function() {
+        clearTimeout(timer);
+    });
+
+}
+
+
+function escapeHtml(value) {
+
+    return String(value == null ? "" : value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
 
 }
 
@@ -2915,9 +3611,9 @@ function renderWeather(place) {
             container.innerHTML = `
 
                 <div class="weather-offline">
-                    Live weather is unavailable right now.
-                    Start the backend with
-                    <code>node server.js</code> to enable it.
+                    Live weather is unavailable for this
+                    destination right now. Try again later
+                    or check a weather app before you travel.
                 </div>
 
             `;
@@ -4165,6 +4861,150 @@ function getRate(currency) {
 }
 
 
+/* =========================================================
+   USER PREFERENCES
+
+   Stored locally so the app remembers currency, language
+   and trip-finder choices between visits.
+========================================================= */
+
+const defaultPrefs = {
+    currency: "USD",
+    language: "en",
+    difficulty: "any",
+    travelerType: "any",
+    avoidCrowd: false,
+    hideCosts: false
+};
+
+
+function getPrefs() {
+
+    try {
+
+        const raw =
+            localStorage.getItem("yk_prefs");
+
+        if (raw) {
+
+            const parsed = JSON.parse(raw);
+
+            return Object.assign(
+                {},
+                defaultPrefs,
+                parsed
+            );
+
+        }
+
+    } catch (err) {
+
+        /* corrupted prefs -> fall back to defaults */
+
+    }
+
+    return Object.assign(
+        {},
+        defaultPrefs
+    );
+
+}
+
+
+function setPrefs(patch) {
+
+    const prefs =
+        getPrefs();
+
+    Object.assign(prefs, patch);
+
+    try {
+
+        localStorage.setItem(
+            "yk_prefs",
+            JSON.stringify(prefs)
+        );
+
+    } catch (err) {
+
+        /* storage unavailable -> ignore */
+
+    }
+
+    return prefs;
+
+}
+
+
+const currencySymbols = {
+
+    NPR: "Rs ",
+    USD: "$",
+    EUR: "€",
+    GBP: "£",
+    JPY: "¥",
+    CNY: "¥",
+    INR: "₹",
+    AUD: "A$",
+    CAD: "C$",
+    MYR: "RM"
+
+};
+
+
+function formatCost(nprAmount) {
+
+    const prefs =
+        getPrefs();
+
+    if (prefs.hideCosts) {
+
+        return "—";
+
+    }
+
+    const currency =
+        prefs.currency || "USD";
+
+    const rate =
+        getRate(currency);
+
+    const symbol =
+        currencySymbols[currency] ||
+        currency + " ";
+
+    if (currency === "NPR") {
+
+        return (
+            "NPR " +
+            Math.round(nprAmount).toLocaleString()
+        );
+
+    }
+
+    if (!rate) {
+
+        return (
+            "NPR " +
+            Math.round(nprAmount).toLocaleString()
+        );
+
+    }
+
+    const converted =
+        nprAmount / rate;
+
+    return (
+        symbol +
+        converted.toLocaleString(
+            undefined,
+            { maximumFractionDigits: 0 }
+        )
+    );
+
+}
+
+
 
 function convertCurrency() {
 
@@ -4263,6 +5103,7 @@ const uiDict = {
         navDiscover: "⌖ Discover Places",
         navGuides: "☷ Travel Guides",
         navSafety: "🛡 Safety Info",
+        navInsights: "📊 Nepal in Numbers",
         navCurrency: "₨ Currency Converter",
         navAbout: "◎ About Us",
         langBtn: "🇳🇵 नेपाली"
@@ -4273,6 +5114,7 @@ const uiDict = {
         navDiscover: "⌖ स्थानहरू पत्ता लगाउनुहोस्",
         navGuides: "☷ यात्रा गाइड",
         navSafety: "🛡 सुरक्षा जानकारी",
+        navInsights: "📊 नेपाल संख्यामा",
         navCurrency: "₨ मुद्रा परिवर्तक",
         navAbout: "◎ हाम्रो बारेमा",
         langBtn: "🇬🇧 English"
@@ -4862,6 +5704,1427 @@ function restoreFromUrl() {
 
 
 /* =========================================================
+   TOAST NOTIFICATIONS
+========================================================= */
+
+let toastTimer = null;
+
+
+function showToast(message) {
+
+    const toast =
+        document.getElementById("toast");
+
+    if (!toast) {
+
+        return;
+
+    }
+
+    toast.textContent =
+        message;
+
+    toast.classList.remove(
+        "hidden"
+    );
+
+    toast.classList.add("show");
+
+
+    if (toastTimer) {
+
+        clearTimeout(toastTimer);
+
+    }
+
+    toastTimer =
+        setTimeout(function() {
+
+            toast.classList.remove(
+                "show"
+            );
+
+            toast.classList.add(
+                "hidden"
+            );
+
+        }, 3500);
+
+}
+
+
+
+/* =========================================================
+   MOBILE SIDEBAR
+========================================================= */
+
+function toggleSidebar() {
+
+    const sidebar =
+        document.querySelector(
+            ".sidebar"
+        );
+
+    if (!sidebar) {
+
+        return;
+
+    }
+
+    const isOpen =
+        sidebar.classList.contains(
+            "open"
+        );
+
+    sidebar.classList.toggle(
+        "open"
+    );
+
+    document.body.classList.toggle(
+        "sidebar-open",
+        !isOpen
+    );
+
+    const menuBtn =
+        document.getElementById(
+            "menuBtn"
+        );
+
+    if (menuBtn) {
+
+        menuBtn.textContent =
+            isOpen ? "☰" : "✕";
+
+    }
+
+}
+
+
+
+/* =========================================================
+   ACCOUNT & SETTINGS
+========================================================= */
+
+let currentUser = null;
+
+
+function toggleSettings() {
+
+    const overlay =
+        document.getElementById(
+            "settingsOverlay"
+        );
+
+    if (!overlay) {
+
+        return;
+
+    }
+
+    const isHidden =
+        overlay.classList.contains(
+            "hidden"
+        );
+
+    if (isHidden) {
+
+        renderSettings();
+
+        overlay.classList.remove(
+            "hidden"
+        );
+
+    } else {
+
+        overlay.classList.add(
+            "hidden"
+        );
+
+    }
+
+}
+
+
+function closeSettings(event) {
+
+    const overlay =
+        document.getElementById(
+            "settingsOverlay"
+        );
+
+    if (!overlay) {
+
+        return;
+
+    }
+
+    if (
+        event &&
+        event.target !== overlay
+    ) {
+
+        return;
+
+    }
+
+    overlay.classList.add(
+        "hidden"
+    );
+
+}
+
+
+function renderSettings() {
+
+    const auth =
+        document.getElementById(
+            "settingsAuth"
+        );
+
+    const profile =
+        document.getElementById(
+            "settingsProfile"
+        );
+
+    if (currentUser) {
+
+        auth.classList.add("hidden");
+
+        profile.classList.remove(
+            "hidden"
+        );
+
+        document
+            .getElementById("profileName")
+            .textContent =
+            currentUser.name ||
+            "Traveler";
+
+        document
+            .getElementById("profileEmail")
+            .textContent =
+            currentUser.email ||
+            "";
+
+        const pic =
+            document.getElementById(
+                "profilePic"
+            );
+
+        if (currentUser.picture) {
+
+            pic.src =
+                currentUser.picture;
+
+        } else {
+
+            pic.removeAttribute(
+                "src"
+            );
+
+        }
+
+    } else {
+
+        auth.classList.remove(
+            "hidden"
+        );
+
+        profile.classList.add(
+            "hidden"
+        );
+
+    }
+
+
+    const prefs =
+        getPrefs();
+
+    document
+        .getElementById("prefCurrency")
+        .value =
+        prefs.currency || "USD";
+
+    document
+        .getElementById("prefLanguage")
+        .value =
+        prefs.language || "en";
+
+    document
+        .getElementById("prefDifficulty")
+        .value =
+        prefs.difficulty || "any";
+
+    document
+        .getElementById("prefTraveler")
+        .value =
+        prefs.travelerType || "any";
+
+    document
+        .getElementById("prefCrowd")
+        .checked =
+        !!prefs.avoidCrowd;
+
+    document
+        .getElementById("prefHideCosts")
+        .checked =
+        prefs.hideCosts !== true;
+
+}
+
+
+function googleLogin() {
+
+    fetch(
+        API_BASE + "/api/auth/google",
+        {
+            credentials: "same-origin",
+            redirect: "manual"
+        }
+    )
+    .then(function(resp) {
+
+        if (
+            resp.status === 0 ||
+            resp.type === "opaqueredirect"
+        ) {
+
+            window.location.href =
+                "/api/auth/google";
+
+            return;
+
+        }
+
+        return resp.json();
+
+    })
+    .then(function(data) {
+
+        if (
+            data &&
+            data.success === false
+        ) {
+
+            showToast(
+                "Google login is not configured yet. Try the demo login instead."
+            );
+
+        }
+
+    })
+    .catch(function() {
+
+        showToast(
+            "Could not reach the login service. Try again."
+        );
+
+    });
+
+}
+
+
+function demoLogin() {
+
+    apiPost(
+        "/api/auth/demo",
+        {}
+    )
+    .then(function(data) {
+
+        if (data && data.success) {
+
+            currentUser = {
+                name: "Demo Traveler",
+                email: "demo@yatrakhoj.local",
+                picture: "",
+                provider: "demo"
+            };
+
+            renderSettings();
+
+            showToast(
+                "Signed in as Demo Traveler"
+            );
+
+        } else {
+
+            showToast(
+                data && data.message
+                ? data.message
+                : "Demo login failed"
+            );
+
+        }
+
+    });
+
+}
+
+
+function logout() {
+
+    apiPost(
+        "/api/auth/logout",
+        {}
+    )
+    .then(function() {
+
+        currentUser = null;
+
+        renderSettings();
+
+        showToast(
+            "Signed out"
+        );
+
+    });
+
+}
+
+
+function restoreSession() {
+
+    apiGet(
+        "/api/auth/me",
+        { success: false }
+    )
+    .then(function(data) {
+
+        if (
+            data &&
+            data.success &&
+            data.user
+        ) {
+
+            currentUser =
+                data.user;
+
+        } else {
+
+            currentUser =
+                null;
+
+        }
+
+        renderSettings();
+
+    });
+
+}
+
+
+function bindPrefsControls() {
+
+    document
+        .getElementById("prefCurrency")
+        .addEventListener("change", function() {
+
+            setPrefs({
+                currency: this.value
+            });
+
+            showToast(
+                "Default currency saved"
+            );
+
+        });
+
+    document
+        .getElementById("prefLanguage")
+        .addEventListener("change", function() {
+
+            const prefs =
+                setPrefs({
+                    language: this.value
+                });
+
+            localStorage.setItem(
+                "yk-lang",
+                prefs.language
+            );
+
+            setLanguage(prefs.language);
+
+            showToast(
+                "Language saved"
+            );
+
+        });
+
+    document
+        .getElementById("prefDifficulty")
+        .addEventListener("change", function() {
+
+            setPrefs({
+                difficulty: this.value
+            });
+
+            showToast(
+                "Default difficulty saved"
+            );
+
+        });
+
+    document
+        .getElementById("prefTraveler")
+        .addEventListener("change", function() {
+
+            setPrefs({
+                travelerType: this.value
+            });
+
+            showToast(
+                "Default traveler type saved"
+            );
+
+        });
+
+    document
+        .getElementById("prefCrowd")
+        .addEventListener("change", function() {
+
+            setPrefs({
+                avoidCrowd: this.checked
+            });
+
+            showToast(
+                this.checked
+                ? "Avoid-crowds preference on"
+                : "Avoid-crowds preference off"
+            );
+
+        });
+
+    document
+        .getElementById("prefHideCosts")
+        .addEventListener("change", function() {
+
+            setPrefs({
+                hideCosts: !this.checked
+            });
+
+            showToast(
+                "Cost display preference saved"
+            );
+
+        });
+
+}
+
+
+function applyPrefsToTripFinder() {
+
+    const prefs =
+        getPrefs();
+
+    const difficulty =
+        document.getElementById(
+            "difficulty"
+        );
+
+    const traveler =
+        document.getElementById(
+            "travelerType"
+        );
+
+    const crowd =
+        document.getElementById(
+            "avoidCrowd"
+        );
+
+    if (difficulty) {
+
+        difficulty.value =
+            prefs.difficulty || "any";
+
+    }
+
+    if (traveler) {
+
+        traveler.value =
+            prefs.travelerType || "any";
+
+    }
+
+    if (crowd) {
+
+        crowd.checked =
+            !!prefs.avoidCrowd;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   COMMUNITY SAFETY REPORTS
+========================================================= */
+
+let reportMap = null;
+
+let reportMarkers = [];
+
+let reportsLoaded = [];
+
+
+const reportCategoryNames = {
+
+    scam: {
+        en: "Scam",
+        ne: "ठगी"
+    },
+
+    harassment: {
+        en: "Harassment",
+        ne: "उत्पीडन"
+    },
+
+    theft: {
+        en: "Theft",
+        ne: "चोरी"
+    },
+
+    info: {
+        en: "Info",
+        ne: "जानकारी"
+    }
+
+};
+
+
+function reportCategoryName(category) {
+
+    const entry =
+        reportCategoryNames[category] ||
+        reportCategoryNames.info;
+
+    return entry[currentLang] ||
+        entry.en;
+
+}
+
+
+function getReportCoords(report) {
+
+    if (
+        report.lat &&
+        report.lng
+    ) {
+
+        return [
+            Number(report.lat),
+            Number(report.lng)
+        ];
+
+    }
+
+    const place =
+        destinations[report.place];
+
+    if (
+        place &&
+        place.coords &&
+        place.coords.lat &&
+        place.coords.lng
+    ) {
+
+        return [
+            place.coords.lat,
+            place.coords.lng
+        ];
+
+    }
+
+    return null;
+
+}
+
+
+function loadReports() {
+
+    apiGet(
+        "/api/reports",
+        { success: false, reports: [] }
+    )
+    .then(function(data) {
+
+        const reports =
+            data &&
+            data.success &&
+            Array.isArray(data.reports)
+            ? data.reports
+            : [];
+
+        reportsLoaded =
+            reports;
+
+        renderReportMap(
+            reports
+        );
+
+        renderReportFeed(
+            reports
+        );
+
+    });
+
+}
+
+
+function renderReportMap(reports) {
+
+    const el =
+        document.getElementById(
+            "reportMap"
+        );
+
+    if (!el || typeof L === "undefined") {
+
+        return;
+
+    }
+
+    if (!reportMap) {
+
+        reportMap =
+            L.map(el).setView(
+                [27.9, 84.1],
+                7
+            );
+
+        L.tileLayer(
+            "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+            {
+                attribution:
+                    "&copy; OpenStreetMap &copy; CARTO",
+                subdomains: "abcd",
+                maxZoom: 18
+            }
+        ).addTo(reportMap);
+
+    }
+
+
+    reportMarkers.forEach(
+        function(marker) {
+
+            reportMap.removeLayer(
+                marker
+            );
+
+        }
+    );
+
+    reportMarkers = [];
+
+
+    const iconColors = {
+        scam: "#C8102E",
+        harassment: "#F2B632",
+        theft: "#8E44AD",
+        info: "#2E86DE"
+    };
+
+
+    reports.forEach(function(report) {
+
+        const coords =
+            getReportCoords(report);
+
+        if (!coords) {
+
+            return;
+
+        }
+
+        const color =
+            iconColors[report.category] ||
+            "#2E86DE";
+
+        const icon =
+            L.divIcon({
+                className:
+                    "report-marker",
+                html:
+                    '<div style="background:' +
+                    color +
+                    '">⚠</div>',
+                iconSize: [24, 24],
+                iconAnchor: [12, 12]
+            });
+
+        const marker =
+            L.marker(coords, {
+                icon: icon
+            })
+            .addTo(reportMap)
+            .bindPopup(
+                "<strong>" +
+                escapeHtml(report.title) +
+                "</strong><br>" +
+                escapeHtml(report.place) +
+                "<br>" +
+                escapeHtml(
+                    report.description || ""
+                )
+            );
+
+        reportMarkers.push(
+            marker
+        );
+
+    });
+
+}
+
+
+function renderReportFeed(reports) {
+
+    const feed =
+        document.getElementById(
+            "reportsFeed"
+        );
+
+    if (!feed) {
+
+        return;
+
+    }
+
+    if (reports.length === 0) {
+
+        feed.innerHTML =
+            '<div class="reports-empty">' +
+            "No reports yet — be the first to share." +
+            "</div>";
+
+        return;
+
+    }
+
+
+    feed.innerHTML =
+        reports
+        .slice(0, 12)
+        .map(function(report) {
+
+            return `
+
+                <div class="report-item cat-${escapeHtml(report.category)}">
+
+                    <div class="report-head">
+
+                        <span class="report-cat">
+                            ${escapeHtml(reportCategoryName(report.category))}
+                        </span>
+
+                        <span class="report-time">
+                            ${escapeHtml(prettyTime(report.time))}
+                        </span>
+
+                    </div>
+
+                    <h4>
+                        ${escapeHtml(report.title)}
+                    </h4>
+
+                    <p>
+                        ${escapeHtml(report.description || "")}
+                    </p>
+
+                    <span class="report-place">
+                        📍 ${escapeHtml(destinationName(report.place))}
+                    </span>
+
+                </div>
+
+            `;
+
+        })
+        .join("");
+
+}
+
+
+function prettyTime(isoTime) {
+
+    if (!isoTime) {
+
+        return "";
+
+    }
+
+    const date =
+        new Date(isoTime);
+
+    if (isNaN(date.getTime())) {
+
+        return isoTime;
+
+    }
+
+    return date.toLocaleDateString(
+        undefined,
+        {
+            day: "numeric",
+            month: "short"
+        }
+    );
+
+}
+
+
+function destinationName(key) {
+
+    const place =
+        destinations[key];
+
+    return place
+        ? place.name
+        : key;
+
+}
+
+
+function openReportForm() {
+
+    const form =
+        document.getElementById(
+            "reportForm"
+        );
+
+    if (!form) {
+
+        return;
+
+    }
+
+    form.classList.remove(
+        "hidden"
+    );
+
+    form.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+}
+
+
+function closeReportForm() {
+
+    const form =
+        document.getElementById(
+            "reportForm"
+        );
+
+    if (form) {
+
+        form.classList.add(
+            "hidden"
+        );
+
+    }
+
+}
+
+
+function submitReport() {
+
+    const place =
+        document
+        .getElementById("reportPlace")
+        .value;
+
+    const category =
+        document
+        .getElementById("reportCategory")
+        .value;
+
+    const severity =
+        document
+        .getElementById("reportSeverity")
+        .value;
+
+    const title =
+        document
+        .getElementById("reportTitle")
+        .value
+        .trim();
+
+    const description =
+        document
+        .getElementById("reportDescription")
+        .value
+        .trim();
+
+    if (!title) {
+
+        showToast(
+            "Please add a short title for your report."
+        );
+
+        return;
+
+    }
+
+
+    const placeData =
+        destinations[place];
+
+    const lat =
+        placeData &&
+        placeData.coords &&
+        placeData.coords.lat
+        ? Number(placeData.coords.lat)
+        : null;
+
+    const lng =
+        placeData &&
+        placeData.coords &&
+        placeData.coords.lng
+        ? Number(placeData.coords.lng)
+        : null;
+
+
+    apiPost(
+        "/api/reports",
+        {
+            place: place,
+            lat: lat,
+            lng: lng,
+            category: category,
+            severity: severity,
+            title: title,
+            description: description
+        }
+    )
+    .then(function(data) {
+
+        if (data && data.success) {
+
+            document
+                .getElementById("reportForm")
+                .classList.add("hidden");
+
+            document
+                .getElementById("reportTitle")
+                .value = "";
+
+            document
+                .getElementById("reportDescription")
+                .value = "";
+
+            showToast(
+                "Report submitted. Thank you for helping other travelers."
+            );
+
+            loadReports();
+
+        } else {
+
+            showToast(
+                data && data.message
+                ? data.message
+                : "Could not submit report."
+            );
+
+        }
+
+    });
+
+}
+
+
+
+/* =========================================================
+   NEPAL IN NUMBERS — TRENDS DASHBOARD
+========================================================= */
+
+function loadTrends() {
+
+    apiGet(
+        "/api/trends",
+        { success: false, trends: null }
+    )
+    .then(function(data) {
+
+        const trends =
+            data &&
+            data.success &&
+            data.trends
+            ? data.trends
+            : null;
+
+        if (!trends) {
+
+            return;
+
+        }
+
+        renderTrendStats(trends);
+
+        renderArrivalsChart(trends);
+
+        renderSeasonalityChart(trends);
+
+        renderMarketsChart(trends);
+
+        renderTrendsTakeaway(trends);
+
+    });
+
+}
+
+
+function renderTrendStats(trends) {
+
+    const stats = [
+        {
+            id: "stat-1",
+            value: "1.16M",
+            label: "Arrivals in 2025"
+        },
+        {
+            id: "stat-2",
+            value: "16.3 days",
+            label: "Average stay"
+        },
+        {
+            id: "stat-3",
+            value: "$33",
+            label: "Spend per day"
+        },
+        {
+            id: "stat-4",
+            value: "33%",
+            label: "Arrivals from India"
+        }
+    ];
+
+
+    stats.forEach(function(stat) {
+
+        const el =
+            document.getElementById(
+                stat.id
+            );
+
+        if (!el) {
+
+            return;
+
+        }
+
+        el.querySelector("strong").textContent =
+            stat.value;
+
+        el.querySelector("span").textContent =
+            stat.label;
+
+    });
+
+}
+
+
+function renderArrivalsChart(trends) {
+
+    const el =
+        document.getElementById(
+            "arrivalsChart"
+        );
+
+    if (!el || !trends.arrivalsByYear) {
+
+        return;
+
+    }
+
+    const entries =
+        trends.arrivalsByYear;
+
+    const max =
+        Math.max.apply(
+            null,
+            entries.map(function(e) {
+                return e.value;
+            })
+        ) || 1;
+
+
+    el.innerHTML =
+        entries
+        .map(function(entry) {
+
+            const year =
+                entry.year;
+
+            const value =
+                entry.value;
+
+            const height =
+                Math.round(
+                    (value / max) * 100
+                );
+
+            return `
+
+                <div class="bar-col">
+
+                    <span class="bar-value">
+                        ${value >= 1000000 ? (value / 1000000).toFixed(2) + "M" : Math.round(value / 1000) + "k"}
+                    </span>
+
+                    <div class="bar-track">
+
+                        <div
+                            class="bar-fill"
+                            style="height:${height}%"
+                        >
+                        </div>
+
+                    </div>
+
+                    <span class="bar-label">
+                        ${year}
+                    </span>
+
+                </div>
+
+            `;
+
+        })
+        .join("");
+
+}
+
+
+function renderSeasonalityChart(trends) {
+
+    const el =
+        document.getElementById(
+            "seasonalityChart"
+        );
+
+    if (!el || !trends.seasonality) {
+
+        return;
+
+    }
+
+    const monthNames = [
+        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+
+    const entries =
+        trends.seasonality;
+
+    const byMonth = {};
+
+    entries.forEach(function(entry) {
+
+        byMonth[entry.month] =
+            entry.value;
+
+    });
+
+
+    el.innerHTML =
+        monthNames
+        .map(function(name, index) {
+
+            const value =
+                byMonth[name] ||
+                (entries[index] && entries[index].value) ||
+                0;
+
+            const height =
+                Math.max(3, value);
+
+            return `
+
+                <div class="bar-col season-col">
+
+                    <div class="bar-track">
+
+                        <div
+                            class="bar-fill season-fill"
+                            style="height:${height}%"
+                            title="${name}: ${value}%"
+                        >
+                        </div>
+
+                    </div>
+
+                    <span class="bar-label">
+                        ${name}
+                    </span>
+
+                </div>
+
+            `;
+
+        })
+        .join("");
+
+}
+
+
+function renderMarketsChart(trends) {
+
+    const el =
+        document.getElementById(
+            "marketsChart"
+        );
+
+    if (!el || !trends.sourceMarkets) {
+
+        return;
+
+    }
+
+    const entries =
+        trends.sourceMarkets;
+
+    const max =
+        Math.max.apply(
+            null,
+            entries.map(function(e) {
+                return e.value;
+            })
+        ) || 1;
+
+
+    el.innerHTML =
+        entries
+        .map(function(entry) {
+
+            const width =
+                Math.round(
+                    (entry.value / max) * 100
+                );
+
+            return `
+
+                <div class="market-row">
+
+                    <span class="market-name">
+                        ${escapeHtml(entry.country || entry.name)}
+                    </span>
+
+                    <div class="market-track">
+
+                        <div
+                            class="market-fill"
+                            style="width:${width}%"
+                        >
+                        </div>
+
+                    </div>
+
+                    <span class="market-value">
+                        ${entry.value}%
+                    </span>
+
+                </div>
+
+            `;
+
+        })
+        .join("");
+
+}
+
+
+function renderTrendsTakeaway(trends) {
+
+    const el =
+        document.getElementById(
+            "trendsTakeaway"
+        );
+
+    if (!el) {
+
+        return;
+
+    }
+
+    el.textContent =
+        trends.takeaway ||
+        "Data from public Nepal Tourism Board reporting.";
+
+}
+
+
+
+/* =========================================================
+   UNDERRATED NEPAL
+========================================================= */
+
+function renderUnderrated() {
+
+    const grid =
+        document.getElementById(
+            "underratedGrid"
+        );
+
+    if (!grid) {
+
+        return;
+
+    }
+
+    grid.innerHTML =
+        underratedRegions
+        .map(function(region) {
+
+            return `
+
+                <div class="underrated-card">
+
+                    <div class="underrated-tags">
+
+                        <span class="crowd-badge crowd-${region.crowdLevel}">
+                            ${crowdLabel(region.crowdLevel)}
+                        </span>
+
+                        <span class="chip chip-${region.difficulty}">
+                            ${difficultyLabel(region.difficulty)}
+                        </span>
+
+                    </div>
+
+                    <span class="underrated-region">
+                        ${escapeHtml(region.region)}
+                    </span>
+
+                    <h3>
+                        ${escapeHtml(region.name)}
+                    </h3>
+
+                    <p>
+                        ${escapeHtml(region.description)}
+                    </p>
+
+                    <span class="underrated-replace">
+                        ☞ Quieter alternative to ${escapeHtml(region.replace)}
+                    </span>
+
+                </div>
+
+            `;
+
+        })
+        .join("");
+
+}
+
+
+
+/* =========================================================
    START WEBSITE
 ========================================================= */
 
@@ -4888,6 +7151,16 @@ function startWebsite() {
     loadLiveCurrency();
 
     restoreFromUrl();
+
+    restoreSession();
+
+    applyPrefsToTripFinder();
+
+    bindPrefsControls();
+
+    renderUnderrated();
+
+    loadTrends();
 
 }
 

@@ -1,0 +1,88 @@
+{
+    "reports": [
+        {
+            "id": "r-1786237495993-dd710dfc",
+            "place": "kathmandu",
+            "lat": 27.72,
+            "lng": 85.32,
+            "category": "scam",
+            "severity": "medium",
+            "title": "Automated QA test report",
+            "description": "This is a test description from the QA script.",
+            "time": "2026-08-09T01:04:55.993Z",
+            "source": "user"
+        },
+        {
+            "id": "seed-1",
+            "place": "kathmandu",
+            "lat": 27.7164,
+            "lng": 85.3181,
+            "category": "scam",
+            "severity": "medium",
+            "title": "Taxi meter overcharge near airport",
+            "description": "Taxi from TIA to Thamel quoted Rs 2,500. Use the prepaid taxi counter inside arrivals instead.",
+            "time": "2026-08-01T09:30:00.000Z",
+            "source": "seed"
+        },
+        {
+            "id": "seed-2",
+            "place": "pokhara",
+            "lat": 28.2096,
+            "lng": 83.9856,
+            "category": "harassment",
+            "severity": "high",
+            "title": "Unwanted attention in Lakeside night market",
+            "description": "Group of men followed a solo traveler near Lakeside around 11pm. Avoid empty side streets after dark and use app taxis.",
+            "time": "2026-08-03T15:10:00.000Z",
+            "source": "seed"
+        },
+        {
+            "id": "seed-3",
+            "place": "mustang",
+            "lat": 28.7789,
+            "lng": 83.7305,
+            "category": "info",
+            "severity": "low",
+            "title": "Road blocked by landslide near Kagbeni",
+            "description": "Check with locals before driving the Kagbeni stretch after heavy rain. Shared jeeps are being re-routed.",
+            "time": "2026-08-05T06:45:00.000Z",
+            "source": "seed"
+        },
+        {
+            "id": "seed-4",
+            "place": "chitwan",
+            "lat": 27.5291,
+            "lng": 84.3542,
+            "category": "scam",
+            "severity": "medium",
+            "title": "Fake safari operator in Sauraha",
+            "description": "Someone posing as a national park guide sells overpriced 'VIP safaris'. Book only through registered lodges.",
+            "time": "2026-08-06T11:20:00.000Z",
+            "source": "seed"
+        },
+        {
+            "id": "seed-5",
+            "place": "kathmandu",
+            "lat": 27.7159,
+            "lng": 85.3257,
+            "category": "theft",
+            "severity": "medium",
+            "title": "Pickpocketing in Thamel crowd",
+            "description": "Phone taken in the evening crowd on the main Thamel street. Keep valuables in a front pocket.",
+            "time": "2026-08-07T13:00:00.000Z",
+            "source": "seed"
+        },
+        {
+            "id": "seed-6",
+            "place": "lumbini",
+            "lat": 27.4797,
+            "lng": 83.2761,
+            "category": "info",
+            "severity": "low",
+            "title": "Gautam Buddha airport has no international flights yet",
+            "description": "Bhairahawa's international airport is underutilised — fly or bus via Kathmandu instead of expecting direct routes.",
+            "time": "2026-08-08T04:30:00.000Z",
+            "source": "seed"
+        }
+    ]
+}

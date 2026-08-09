@@ -7,6 +7,16 @@
 
     <title>YatraKhoj | Find Hidden. Go Local.</title>
 
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2050%2068'%3E%3Cpath%20d='M25%204%20L25%2044%20L8%2032%20L25%2064%20L25%2044%20L42%2032%20L25%204%20z'%20fill='%230B1E5B'/%3E%3Cpath%20d='M25%208%20L25%2040%20L14%2031.5%20L25%2056%20L25%2040%20L36%2031.5%20L25%208%20z'%20fill='%23C8102E'/%3E%3Ccircle%20cx='25'%20cy='20'%20r='4'%20fill='%23ffffff'/%3E%3Cpath%20d='M22%2044%20q3%204%206%200%20M22%2048%20q3%204%206%200'%20stroke='%23ffffff'%20fill='none'%20stroke-width='1.5'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet"
@@ -30,7 +40,17 @@
         <div class="brand">
 
             <div class="logo">
-                🏔
+
+                <svg class="flag-svg" viewBox="0 0 60 85" xmlns="http://www.w3.org/2000/svg" aria-label="Nepal flag">
+                    <path d="M0,0 H60 V52 L30,85 L0,52 Z" fill="#1A2E7C"/>
+                    <path d="M5,6 H55 V48 L30,79 L5,48 Z" fill="#C8102E"/>
+                    <circle cx="30" cy="20" r="7.5" fill="#ffffff"/>
+                    <circle cx="30" cy="20" r="7.5" fill="#C8102E" transform="translate(3,-1.5)"/>
+                    <circle cx="30" cy="13" r="2" fill="#ffffff"/>
+                    <circle cx="30" cy="56" r="5" fill="#ffffff"/>
+                    <path d="M30,44 V68 M16,56 H44 M21,48 L39,64 M39,48 L21,64" stroke="#ffffff" stroke-width="2" fill="none"/>
+                </svg>
+
             </div>
 
             <div>
@@ -88,6 +108,15 @@
 
             <button
                 class="nav-btn"
+                onclick="showPage('insights', this)"
+                data-i18n="navInsights"
+            >
+                📊 Nepal in Numbers
+            </button>
+
+
+            <button
+                class="nav-btn"
                 onclick="showPage('currency', this)"
                 data-i18n="navCurrency"
             >
@@ -135,6 +164,15 @@
 
         <div class="topbar">
 
+            <button
+                class="top-btn menu-btn"
+                id="menuBtn"
+                onclick="toggleSidebar()"
+                aria-label="Menu"
+            >
+                ☰
+            </button>
+
             <span class="topbar-note">
                 🇳🇵 Nepal Travel Companion
             </span>
@@ -155,6 +193,19 @@
                     onclick="toggleLanguage()"
                 >
                     🇳🇵 नेपाली
+                </button>
+
+                <button
+                    class="top-btn settings-btn"
+                    id="settingsBtn"
+                    onclick="toggleSettings()"
+                    aria-label="Settings"
+                    title="Settings"
+                >
+                    <span class="settings-gear">⚙</span>
+                    <span class="user-avatar hidden" id="settingsAvatar">
+                        <img id="settingsAvatarImg" alt="Profile">
+                    </span>
                 </button>
 
             </div>
@@ -472,6 +523,74 @@
                         <div class="field">
 
                             <label>
+                                Difficulty
+                            </label>
+
+                            <select id="difficulty">
+
+                                <option value="any" selected>
+                                    Any / Not sure
+                                </option>
+
+                                <option value="easy">
+                                    😌 Easy
+                                </option>
+
+                                <option value="moderate">
+                                    ⚖ Moderate
+                                </option>
+
+                                <option value="challenging">
+                                    🔥 Challenging
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="field">
+
+                            <label>
+                                Who's travelling?
+                            </label>
+
+                            <select id="travelerType">
+
+                                <option value="any" selected>
+                                    Any group
+                                </option>
+
+                                <option value="solo">
+                                    Solo traveler
+                                </option>
+
+                                <option value="couple">
+                                    Couple
+                                </option>
+
+                                <option value="family">
+                                    Family
+                                </option>
+
+                                <option value="women">
+                                    Women-only
+                                </option>
+
+                                <option value="friends">
+                                    Friends
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="field">
+
+                            <label>
                                 Budget per day (NPR)
                             </label>
 
@@ -483,6 +602,22 @@
                             >
 
                         </div>
+
+
+                        <label class="crowd-toggle">
+
+                            <input
+                                id="avoidCrowd"
+                                type="checkbox"
+                            >
+
+                            <span class="crowd-switch"></span>
+
+                            <span class="crowd-label">
+                                😮‍💨 Avoid the crowds
+                            </span>
+
+                        </label>
 
 
 
@@ -733,6 +868,35 @@
 
 
 
+                <!-- HIRE FAIR -->
+
+                <div class="content-heading">
+
+                    <span class="mini-title">
+                        ETHICAL TRAVEL
+                    </span>
+
+                    <h2>
+                        Hire Fair
+                    </h2>
+
+                    <p>
+                        Nepal's guides and porters are the backbone of
+                        trekking — often exploited. Know fair wages,
+                        safe loads and the right questions to ask.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="homeHireFair"
+                    class="hire-fair"
+                >
+                </div>
+
+
+
                 <!-- PLACES -->
 
                 <div class="content-heading">
@@ -953,6 +1117,40 @@
 
                 </div>
 
+
+                <!-- =============================================
+                     UNDERRATED NEPAL
+                ============================================== -->
+
+                <div class="underrated-panel">
+
+                    <div class="content-heading">
+
+                        <span class="mini-title">
+                            BEYOND THE OBVIOUS
+                        </span>
+
+                        <h2>
+                            Underrated Nepal
+                        </h2>
+
+                        <p>
+                            Overtourism concentrates travellers on a few
+                            famous routes. These places deserve your time —
+                            fewer crowds, honest prices, unforgettable landscapes.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        id="underratedGrid"
+                        class="underrated-grid"
+                    >
+                    </div>
+
+                </div>
+
             </div>
 
         </section>
@@ -1113,6 +1311,284 @@
                 >
                 </div>
 
+
+                <!-- =============================================
+                     COMMUNITY REPORTS
+                ============================================== -->
+
+                <div class="community-reports">
+
+                    <div class="content-heading">
+
+                        <span class="mini-title">
+                            LIVE + CROWDSOURCED
+                        </span>
+
+                        <h2>
+                            Community Safety Reports
+                        </h2>
+
+                        <p>
+                            Scams, harassment, theft and travel alerts
+                            reported by travelers — pinned on a live map.
+                            Report what you experience to help others.
+                        </p>
+
+                    </div>
+
+
+                    <div class="reports-toolbar">
+
+                        <div class="reports-legend">
+                            <span class="legend-dot scam"></span> Scam
+                            <span class="legend-dot harassment"></span> Harassment
+                            <span class="legend-dot theft"></span> Theft
+                            <span class="legend-dot info"></span> Info
+                        </div>
+
+
+                        <button
+                            class="report-btn"
+                            onclick="openReportForm()"
+                        >
+                            + Report an Incident
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="reportMap"
+                        class="report-map"
+                    >
+                    </div>
+
+
+                    <div class="reports-layout">
+
+                        <div class="reports-feed">
+
+                            <h3>
+                                Recent reports
+                            </h3>
+
+                            <div
+                                id="reportsFeed"
+                                class="reports-list"
+                            >
+                                <div class="reports-empty">
+                                    Loading reports…
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="reportForm"
+                            class="report-form hidden"
+                        >
+
+                            <h3>
+                                Share what happened
+                            </h3>
+
+                            <div class="field">
+                                <label>Place</label>
+                                <select id="reportPlace">
+                                    <option value="kathmandu">Kathmandu</option>
+                                    <option value="pokhara">Pokhara</option>
+                                    <option value="lumbini">Lumbini</option>
+                                    <option value="chitwan">Chitwan</option>
+                                    <option value="mustang">Mustang</option>
+                                    <option value="ilam">Ilam</option>
+                                    <option value="taplejung">Taplejung</option>
+                                    <option value="tehrathum">Tehrathum</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label>Category</label>
+                                <select id="reportCategory">
+                                    <option value="scam">Scam / overcharging</option>
+                                    <option value="harassment">Harassment</option>
+                                    <option value="theft">Theft</option>
+                                    <option value="info">Safety info / alert</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label>Severity</label>
+                                <select id="reportSeverity">
+                                    <option value="low">Low</option>
+                                    <option value="medium" selected>Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label>Short title</label>
+                                <input id="reportTitle" type="text"
+                                    maxlength="120" placeholder="e.g. Taxi overcharge">
+                            </div>
+
+                            <div class="field">
+                                <label>Description</label>
+                                <textarea id="reportDescription"
+                                    maxlength="800" rows="3"
+                                    placeholder="What happened and how to avoid it…"></textarea>
+                            </div>
+
+                            <div class="report-actions">
+                                <button
+                                    class="report-btn"
+                                    onclick="submitReport()"
+                                >
+                                    Submit report
+                                </button>
+                                <button
+                                    class="report-cancel"
+                                    onclick="closeReportForm()"
+                                >
+                                    Cancel
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             INSIGHTS / NEPAL IN NUMBERS
+        ================================================== -->
+
+        <section
+            id="insights"
+            class="page"
+        >
+
+            <div class="page-header">
+
+                <span class="mini-title">
+                    TOURISM DATA, FILLED
+                </span>
+
+                <h1>
+                    Nepal in Numbers
+                </h1>
+
+                <p>
+                    The national tourism dashboard Nepal is missing —
+                    arrivals, seasonality, markets and spending,
+                    from public reporting.
+                </p>
+
+            </div>
+
+
+            <div class="page-container">
+
+
+                <div class="insight-stats">
+
+                    <div class="stat-card" id="stat-1">
+                        <strong>—</strong>
+                        <span>Loading…</span>
+                    </div>
+
+                    <div class="stat-card" id="stat-2">
+                        <strong>—</strong>
+                        <span>Loading…</span>
+                    </div>
+
+                    <div class="stat-card" id="stat-3">
+                        <strong>—</strong>
+                        <span>Loading…</span>
+                    </div>
+
+                    <div class="stat-card" id="stat-4">
+                        <strong>—</strong>
+                        <span>Loading…</span>
+                    </div>
+
+                </div>
+
+
+                <div class="charts-grid">
+
+                    <div class="chart-card">
+
+                        <span class="mini-title">
+                            INTERNATIONAL ARRIVALS
+                        </span>
+
+                        <h3>
+                            Recovery since the pandemic
+                        </h3>
+
+                        <div id="arrivalsChart" class="bar-chart">
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart-card">
+
+                        <span class="mini-title">
+                            SEASONALITY
+                        </span>
+
+                        <h3>
+                            When everyone visits
+                        </h3>
+
+                        <div id="seasonalityChart" class="bar-chart">
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart-card">
+
+                        <span class="mini-title">
+                            SOURCE MARKETS
+                        </span>
+
+                        <h3>
+                            Where travelers come from
+                        </h3>
+
+                        <div id="marketsChart" class="bar-chart">
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart-card takeaway-card">
+
+                        <span class="mini-title">
+                            WHY IT MATTERS
+                        </span>
+
+                        <h3>
+                            Volume up, value down
+                        </h3>
+
+                        <p id="trendsTakeaway">
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
 
         </section>
@@ -1239,9 +1715,8 @@
 
 
                     <p class="demo-warning">
-                        Demo exchange rates only.
-                        Connect a live currency API later
-                        for real-time conversion.
+                        Live rates fetched when available.
+                        Falls back to cached demo rates offline.
                     </p>
 
                 </div>
@@ -1285,7 +1760,17 @@
                 <div class="about-card">
 
                     <div class="nepal-icon">
-                        🇳🇵
+
+                        <svg class="flag-svg flag-large" viewBox="0 0 60 85" xmlns="http://www.w3.org/2000/svg" aria-label="Nepal flag">
+                            <path d="M0,0 H60 V52 L30,85 L0,52 Z" fill="#1A2E7C"/>
+                            <path d="M5,6 H55 V48 L30,79 L5,48 Z" fill="#C8102E"/>
+                            <circle cx="30" cy="20" r="7.5" fill="#ffffff"/>
+                            <circle cx="30" cy="20" r="7.5" fill="#C8102E" transform="translate(3,-1.5)"/>
+                            <circle cx="30" cy="13" r="2" fill="#ffffff"/>
+                            <circle cx="30" cy="56" r="5" fill="#ffffff"/>
+                            <path d="M30,44 V68 M16,56 H44 M21,48 L39,64 M39,48 L21,64" stroke="#ffffff" stroke-width="2" fill="none"/>
+                        </svg>
+
                     </div>
 
 
@@ -1412,6 +1897,193 @@
             </div>
 
         </section>
+
+
+        <!-- =================================================
+             SETTINGS MODAL
+        ================================================== -->
+
+        <div
+            id="settingsOverlay"
+            class="settings-overlay hidden"
+            onclick="closeSettings(event)"
+        >
+
+            <div
+                id="settingsPanel"
+                class="settings-panel"
+            >
+
+                <div class="settings-header">
+
+                    <div>
+                        <span class="mini-title">
+                            ACCOUNT & PREFERENCES
+                        </span>
+                        <h2>
+                            Settings
+                        </h2>
+                    </div>
+
+                    <button
+                        class="settings-close"
+                        onclick="closeSettings()"
+                        aria-label="Close"
+                    >
+                        ✕
+                    </button>
+
+                </div>
+
+
+                <div id="settingsAuth" class="settings-section">
+
+                    <div class="settings-login-message">
+                        Sign in to personalise YatraKhoj and keep your
+                        preferences across devices.
+                    </div>
+
+                    <div class="settings-actions">
+
+                        <button
+                            id="googleLoginBtn"
+                            class="google-btn"
+                            onclick="googleLogin()"
+                        >
+                            <svg class="google-icon" viewBox="0 0 24 24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/>
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/>
+                                <path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88l3.66-2.84z"/>
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                            </svg>
+                            Continue with Google
+                        </button>
+
+                        <button
+                            id="demoLoginBtn"
+                            class="demo-btn"
+                            onclick="demoLogin()"
+                        >
+                            ⚡ Try demo login
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div id="settingsProfile" class="settings-section hidden">
+
+                    <div class="profile-row">
+
+                        <img
+                            id="profilePic"
+                            class="profile-pic"
+                            alt="Profile"
+                            src=""
+                        >
+
+                        <div>
+                            <h3 id="profileName"></h3>
+                            <p id="profileEmail"></p>
+                        </div>
+
+                    </div>
+
+                    <button
+                        id="logoutBtn"
+                        class="logout-btn"
+                        onclick="logout()"
+                    >
+                        ⏻ Sign out
+                    </button>
+
+                </div>
+
+
+                <div class="settings-section">
+
+                    <h3 class="settings-title">
+                        Trip preferences
+                    </h3>
+
+                    <div class="setting-row">
+                        <label for="prefCurrency">
+                            Default currency
+                        </label>
+                        <select id="prefCurrency">
+                            <option value="USD">USD — US Dollar</option>
+                            <option value="GBP">GBP — British Pound</option>
+                            <option value="INR">INR — Indian Rupee</option>
+                            <option value="CNY">CNY — Chinese Yuan</option>
+                            <option value="AED">AED — UAE Dirham</option>
+                            <option value="MYR">MYR — Malaysian Ringgit</option>
+                            <option value="EUR">EUR — Euro</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-row">
+                        <label for="prefLanguage">
+                            Default language
+                        </label>
+                        <select id="prefLanguage">
+                            <option value="en">English</option>
+                            <option value="ne">नेपाली (Nepali)</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-row">
+                        <label for="prefDifficulty">
+                            Default difficulty
+                        </label>
+                        <select id="prefDifficulty">
+                            <option value="any">Any / Not sure</option>
+                            <option value="easy">Easy</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="challenging">Challenging</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-row">
+                        <label for="prefTraveler">
+                            Default traveler type
+                        </label>
+                        <select id="prefTraveler">
+                            <option value="any">Any group</option>
+                            <option value="solo">Solo traveler</option>
+                            <option value="couple">Couple</option>
+                            <option value="family">Family</option>
+                            <option value="women">Women-only</option>
+                            <option value="friends">Friends</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-row">
+                        <label for="prefCrowd">
+                            Avoid crowds by default
+                        </label>
+                        <input type="checkbox" id="prefCrowd">
+                    </div>
+
+                    <div class="setting-row">
+                        <label for="prefHideCosts">
+                            Show trip costs in my currency
+                        </label>
+                        <input type="checkbox" id="prefHideCosts" checked>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="toast"
+            class="toast hidden"
+        >
+        </div>
 
 
         <!-- =================================================
