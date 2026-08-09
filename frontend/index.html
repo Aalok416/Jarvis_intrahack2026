@@ -8,6 +8,10 @@
     <title>YatraKhoj | Find Hidden. Go Local.</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
 </head>
 
 <body>
@@ -18,7 +22,7 @@
          SIDEBAR
     ====================================================== -->
 
-  <  <aside class="sidebar">>
+  <aside class="sidebar">
 
     <a href="index.html" class="logo-link">
 
@@ -49,6 +53,7 @@
             <button
                 class="nav-btn active"
                 onclick="showPage('home', this)"
+                data-i18n="navHome"
             >
                 ⌂ Find Your Trip
             </button>
@@ -57,6 +62,7 @@
             <button
                 class="nav-btn"
                 onclick="showPage('discover', this)"
+                data-i18n="navDiscover"
             >
                 ⌖ Discover Places
             </button>
@@ -65,6 +71,7 @@
             <button
                 class="nav-btn"
                 onclick="showPage('guides', this)"
+                data-i18n="navGuides"
             >
                 ☷ Travel Guides
             </button>
@@ -73,6 +80,7 @@
             <button
                 class="nav-btn"
                 onclick="showPage('safety', this)"
+                data-i18n="navSafety"
             >
                 🛡 Safety Info
             </button>
@@ -81,6 +89,7 @@
             <button
                 class="nav-btn"
                 onclick="showPage('currency', this)"
+                data-i18n="navCurrency"
             >
                 ₨ Currency Converter
             </button>
@@ -89,6 +98,7 @@
             <button
                 class="nav-btn"
                 onclick="showPage('about', this)"
+                data-i18n="navAbout"
             >
                 ◎ About Us
             </button>
@@ -122,6 +132,34 @@
     ====================================================== -->
 
     <main class="main">
+
+        <div class="topbar">
+
+            <span class="topbar-note">
+                🇳🇵 Nepal Travel Companion
+            </span>
+
+            <div class="topbar-actions">
+
+                <button
+                    class="top-btn"
+                    onclick="openMyTrips()"
+                >
+                    🗂 My Trips
+                </button>
+
+                <button
+                    class="top-btn lang-btn"
+                    id="langBtn"
+                    data-i18n="langBtn"
+                    onclick="toggleLanguage()"
+                >
+                    🇳🇵 नेपाली
+                </button>
+
+            </div>
+
+        </div>
 
 
         <!-- =================================================
@@ -242,6 +280,7 @@
 
                         <button
                             class="interest"
+                            data-interest="trekking"
                             onclick="toggleInterest(this)"
                         >
                             <span>🥾</span>
@@ -252,6 +291,7 @@
 
                         <button
                             class="interest"
+                            data-interest="lakes"
                             onclick="toggleInterest(this)"
                         >
                             <span>🌊</span>
@@ -262,6 +302,7 @@
 
                         <button
                             class="interest"
+                            data-interest="nature"
                             onclick="toggleInterest(this)"
                         >
                             <span>🌿</span>
@@ -272,6 +313,7 @@
 
                         <button
                             class="interest"
+                            data-interest="culture"
                             onclick="toggleInterest(this)"
                         >
                             <span>🏯</span>
@@ -282,6 +324,7 @@
 
                         <button
                             class="interest"
+                            data-interest="food"
                             onclick="toggleInterest(this)"
                         >
                             <span>🍜</span>
@@ -292,6 +335,7 @@
 
                         <button
                             class="interest"
+                            data-interest="adventure"
                             onclick="toggleInterest(this)"
                         >
                             <span>🪂</span>
@@ -302,6 +346,7 @@
 
                         <button
                             class="interest"
+                            data-interest="hidden"
                             onclick="toggleInterest(this)"
                         >
                             <span>💎</span>
@@ -312,6 +357,7 @@
 
                         <button
                             class="interest"
+                            data-interest="relaxation"
                             onclick="toggleInterest(this)"
                         >
                             <span>🌄</span>
@@ -333,11 +379,11 @@
 
                         <div>
                             <h3>
-                                Search your journey
+                                Plan your journey
                             </h3>
 
                             <p>
-                                Your starting point is Itahari.
+                                Choose your time, starting point and daily budget.
                             </p>
                         </div>
 
@@ -356,10 +402,10 @@
                             <select id="duration">
 
                                 <option>
-                                    2 Days
+                                    1 Day
                                 </option>
 
-                                <option>
+                                <option selected>
                                     3 Days
                                 </option>
 
@@ -385,8 +431,36 @@
 
                             <select id="starting">
 
-                                <option value="Itahari">
+                                <option value="Itahari" selected>
                                     Itahari
+                                </option>
+
+                                <option value="Biratnagar">
+                                    Biratnagar
+                                </option>
+
+                                <option value="Dharan">
+                                    Dharan
+                                </option>
+
+                                <option value="Birtamod">
+                                    Birtamod
+                                </option>
+
+                                <option value="Kathmandu">
+                                    Kathmandu
+                                </option>
+
+                                <option value="Pokhara">
+                                    Pokhara
+                                </option>
+
+                                <option value="Birgunj">
+                                    Birgunj
+                                </option>
+
+                                <option value="Bhairahawa">
+                                    Bhairahawa
                                 </option>
 
                             </select>
@@ -395,54 +469,18 @@
 
 
 
-                        <div class="field destination-field">
+                        <div class="field">
 
                             <label>
-                                Destination
+                                Budget per day (NPR)
                             </label>
 
-                            <select
-                                id="destination"
-                                onchange="destinationChanged()"
+                            <input
+                                id="budget"
+                                type="number"
+                                min="0"
+                                placeholder="e.g. 3000"
                             >
-
-                                <option value="">
-                                    Select Destination
-                                </option>
-
-                                <option value="tehrathum">
-                                    Tehrathum
-                                </option>
-
-                                <option value="taplejung">
-                                    Taplejung
-                                </option>
-
-                                <option value="ilam">
-                                    Ilam
-                                </option>
-
-                                <option value="pokhara">
-                                    Pokhara
-                                </option>
-
-                                <option value="lumbini">
-                                    Lumbini
-                                </option>
-
-                                <option value="chitwan">
-                                    Chitwan
-                                </option>
-
-                                <option value="kathmandu">
-                                    Kathmandu
-                                </option>
-
-                                <option value="mustang">
-                                    Mustang
-                                </option>
-
-                            </select>
 
                         </div>
 
@@ -472,9 +510,9 @@
 
 
             <!-- =================================================
-                 SEARCH RESULT
+                 SEARCH RESULTS
 
-                 This appears ONLY after clicking Find My Trip
+                 Ranked destination cards appear after Find My Trip
             ================================================== -->
 
             <div
@@ -485,89 +523,25 @@
                 <div class="section-heading">
 
                     <span class="mini-title">
-                        SEARCH RESULT
+                        MATCHED TRIPS
                     </span>
 
                     <h2>
-                        We found your destination
+                        We found trips for you
                     </h2>
 
                     <p>
-                        Click the destination below to see safety,
-                        places, accommodation and important information.
+                        Ranked by your interests, budget and time.
+                        Click a destination to open the full details.
                     </p>
 
                 </div>
 
 
                 <div
-                    id="destinationCard"
-                    class="destination-result"
-                    onclick="openDestination()"
+                    id="resultsList"
+                    class="results-list"
                 >
-
-                    <img
-                        id="destinationImage"
-                        src=""
-                        alt=""
-                    >
-
-
-                    <div class="destination-overlay">
-                    </div>
-
-
-                    <div class="destination-result-content">
-
-                        <div>
-
-                            <span
-                                id="destinationCategory"
-                                class="destination-badge"
-                            >
-                            </span>
-
-
-                            <h2 id="destinationName">
-                            </h2>
-
-
-                            <p id="destinationDescription">
-                            </p>
-
-
-                            <div class="destination-tags">
-
-                                <span>
-                                    📍 From Itahari
-                                </span>
-
-                                <span id="destinationDuration">
-                                    🕐 3 Days
-                                </span>
-
-                                <span id="destinationBest">
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="click-message">
-
-                            <small>
-                                CLICK DESTINATION
-                            </small>
-
-                            <strong>
-                                View Full Details →
-                            </strong>
-
-                        </div>
-
-                    </div>
-
                 </div>
 
             </div>
@@ -615,6 +589,117 @@
                 <div
                     id="importantInfo"
                     class="important-grid"
+                >
+                </div>
+
+
+
+                <!-- WEATHER -->
+
+                <div class="content-heading">
+
+                    <span class="mini-title">
+                        LIVE CONDITIONS
+                    </span>
+
+                    <h2>
+                        Current Weather
+                    </h2>
+
+                    <p>
+                        Live weather for the destination to help
+                        you plan what to pack.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="homeWeather"
+                    class="weather-strip"
+                >
+                </div>
+
+
+
+                <!-- TRANSPORT -->
+
+                <div class="content-heading">
+
+                    <span class="mini-title">
+                        HOW TO REACH
+                    </span>
+
+                    <h2>
+                        Transport Options
+                    </h2>
+
+                    <p>
+                        Typical ways to reach this destination
+                        with approximate fares.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="homeTransport"
+                    class="transport-grid"
+                >
+                </div>
+
+
+
+                <!-- ITINERARY -->
+
+                <div class="content-heading">
+
+                    <span class="mini-title">
+                        DAY BY DAY
+                    </span>
+
+                    <h2>
+                        Suggested Itinerary
+                    </h2>
+
+                    <p>
+                        A simple plan built around your trip length
+                        and starting point.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="homeItinerary"
+                    class="itinerary-list"
+                >
+                </div>
+
+
+
+                <!-- MAP -->
+
+                <div class="content-heading">
+
+                    <span class="mini-title">
+                        WHERE TO GO
+                    </span>
+
+                    <h2>
+                        On the Map
+                    </h2>
+
+                    <p>
+                        Locate the destination and plan your route.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="homeMap"
+                    class="map-container"
                 >
                 </div>
 
@@ -702,6 +787,62 @@
                 >
                 </div>
 
+
+
+                <!-- PACKING -->
+
+                <div class="content-heading">
+
+                    <span class="mini-title">
+                        PACK SMART
+                    </span>
+
+                    <h2>
+                        Packing Checklist
+                    </h2>
+
+                    <p>
+                        A destination-aware checklist built from
+                        the season and safety conditions.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="homePacking"
+                    class="packing-grid"
+                >
+                </div>
+
+
+
+                <!-- EMERGENCY -->
+
+                <div class="content-heading">
+
+                    <span class="mini-title">
+                        IN CASE OF EMERGENCY
+                    </span>
+
+                    <h2>
+                        Emergency Contacts
+                    </h2>
+
+                    <p>
+                        National hotlines and destination health
+                        guidance.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="homeEmergency"
+                    class="emergency-grid"
+                >
+                </div>
+
             </div>
 
         </section>
@@ -737,6 +878,24 @@
 
 
             <div class="page-container">
+
+                <div class="discover-tools">
+
+                    <input
+                        id="discoverSearch"
+                        type="text"
+                        placeholder="Search destinations…"
+                        oninput="applyDiscoverFilters()"
+                        class="search-input"
+                    >
+
+                    <div
+                        id="discoverFilters"
+                        class="filter-chips"
+                    >
+                    </div>
+
+                </div>
 
                 <div
                     id="discoverGrid"
@@ -1255,6 +1414,42 @@
         </section>
 
 
+        <!-- =================================================
+             MY TRIPS
+        ================================================== -->
+
+        <div
+            id="myTripsPanel"
+            class="page-container hidden"
+        >
+
+            <div class="content-heading">
+
+                <span class="mini-title">
+                    SAVED PLANS
+                </span>
+
+                <h2>
+                    My Trips
+                </h2>
+
+                <p>
+                    Trips you saved on this device. Click a saved
+                    trip to reopen its full details.
+                </p>
+
+            </div>
+
+
+            <div
+                id="tripsList"
+                class="trips-list"
+            >
+            </div>
+
+        </div>
+
+
         <footer>
             YatraKhoj • Find Hidden. Go Local. • Team Jarvis
         </footer>
@@ -1263,6 +1458,10 @@
 
 </div>
 
+
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+></script>
 
 <script src="script.js"></script>
 

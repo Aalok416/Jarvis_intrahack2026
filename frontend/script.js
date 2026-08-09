@@ -37,6 +37,54 @@ const destinations = {
         best:
             "🌿 Nature & Hidden Gems",
 
+        interests: [
+            "nature",
+            "hidden",
+            "trekking",
+            "relaxation"
+        ],
+
+        coords: {
+            lat: 27.14,
+            lng: 87.46
+        },
+
+        minDays: 2,
+
+        budget: {
+            transport: 800,
+            lodging: 1500,
+            food: 600,
+            activities: 200
+        },
+
+        safetyLevels: {
+            altitude: "medium",
+            weather: "medium",
+            road: "high",
+            network: "medium",
+            health: "high"
+        },
+
+        transport: {
+
+            options: [
+                {
+                    type: "Local Bus",
+                    fare: "Rs 800–1,200",
+                    duration: "10–12 hr"
+                },
+                {
+                    type: "Shared Jeep",
+                    fare: "Rs 1,500–2,500",
+                    duration: "8–10 hr"
+                }
+            ],
+
+            note: "Check road conditions before leaving, especially during monsoon."
+
+        },
+
         image:
             image("Basantapur Bazaar Terathum.jpg"),
 
@@ -210,6 +258,54 @@ const destinations = {
 
         best:
             "🥾 Trekking & Culture",
+
+        interests: [
+            "trekking",
+            "culture",
+            "nature",
+            "adventure"
+        ],
+
+        coords: {
+            lat: 27.35,
+            lng: 87.67
+        },
+
+        minDays: 4,
+
+        budget: {
+            transport: 1200,
+            lodging: 2000,
+            food: 800,
+            activities: 400
+        },
+
+        safetyLevels: {
+            altitude: "high",
+            weather: "high",
+            road: "high",
+            network: "high",
+            health: "high"
+        },
+
+        transport: {
+
+            options: [
+                {
+                    type: "Local Bus",
+                    fare: "Rs 1,200–1,800",
+                    duration: "12–14 hr"
+                },
+                {
+                    type: "Shared Jeep",
+                    fare: "Rs 2,000–3,500",
+                    duration: "10–12 hr"
+                }
+            ],
+
+            note: "Remote sections may require local jeeps and walking."
+
+        },
 
         image:
             image("Pathibhara taplejung.jpg"),
@@ -385,6 +481,54 @@ const destinations = {
         best:
             "🌿 Nature & Relaxation",
 
+        interests: [
+            "nature",
+            "relaxation",
+            "food",
+            "hidden"
+        ],
+
+        coords: {
+            lat: 26.91,
+            lng: 87.93
+        },
+
+        minDays: 2,
+
+        budget: {
+            transport: 600,
+            lodging: 1500,
+            food: 600,
+            activities: 300
+        },
+
+        safetyLevels: {
+            altitude: "medium",
+            weather: "medium",
+            road: "medium",
+            network: "medium",
+            health: "medium"
+        },
+
+        transport: {
+
+            options: [
+                {
+                    type: "Local Bus",
+                    fare: "Rs 600–900",
+                    duration: "6–8 hr"
+                },
+                {
+                    type: "Taxi / Private",
+                    fare: "Rs 3,500–5,000",
+                    duration: "4–5 hr"
+                }
+            ],
+
+            note: "One of the easiest scenic hill destinations to reach by road."
+
+        },
+
         image:
             image("Kanyam Tea Garden, Illam.jpg"),
 
@@ -558,6 +702,60 @@ const destinations = {
 
         best:
             "🌊 Lakes & Adventure",
+
+        interests: [
+            "lakes",
+            "adventure",
+            "nature",
+            "relaxation",
+            "food"
+        ],
+
+        coords: {
+            lat: 28.21,
+            lng: 83.99
+        },
+
+        minDays: 3,
+
+        budget: {
+            transport: 1500,
+            lodging: 3000,
+            food: 1000,
+            activities: 1500
+        },
+
+        safetyLevels: {
+            altitude: "low",
+            weather: "medium",
+            road: "medium",
+            network: "low",
+            health: "low"
+        },
+
+        transport: {
+
+            options: [
+                {
+                    type: "Tourist Bus",
+                    fare: "Rs 1,500–2,500",
+                    duration: "12–14 hr"
+                },
+                {
+                    type: "Domestic Flight",
+                    fare: "Rs 8,000+",
+                    duration: "45 min"
+                },
+                {
+                    type: "Night Bus",
+                    fare: "Rs 2,000–3,000",
+                    duration: "overnight"
+                }
+            ],
+
+            note: "Reachable by road and domestic flight; the drive is long, so allow breaks."
+
+        },
 
         image:
             image("Pokhara, Phewa Lake, Nepal.jpg"),
@@ -733,6 +931,52 @@ const destinations = {
         best:
             "🏯 Culture & History",
 
+        interests: [
+            "culture",
+            "relaxation"
+        ],
+
+        coords: {
+            lat: 27.47,
+            lng: 83.28
+        },
+
+        minDays: 2,
+
+        budget: {
+            transport: 1500,
+            lodging: 2500,
+            food: 800,
+            activities: 300
+        },
+
+        safetyLevels: {
+            altitude: "low",
+            weather: "high",
+            road: "low",
+            network: "low",
+            health: "low"
+        },
+
+        transport: {
+
+            options: [
+                {
+                    type: "Tourist Bus",
+                    fare: "Rs 1,500–2,200",
+                    duration: "12–14 hr"
+                },
+                {
+                    type: "Flight to Bhairahawa",
+                    fare: "Rs 9,000+",
+                    duration: "1 hr + short drive"
+                }
+            ],
+
+            note: "The heritage area requires considerable walking, so visit in cooler months."
+
+        },
+
         image:
             image("Maya Devi Temple - Lumbini.jpg"),
 
@@ -906,6 +1150,52 @@ const destinations = {
 
         best:
             "🦏 Wildlife & Nature",
+
+        interests: [
+            "nature",
+            "adventure"
+        ],
+
+        coords: {
+            lat: 27.57,
+            lng: 84.49
+        },
+
+        minDays: 2,
+
+        budget: {
+            transport: 1200,
+            lodging: 3000,
+            food: 1000,
+            activities: 2000
+        },
+
+        safetyLevels: {
+            altitude: "low",
+            weather: "high",
+            road: "low",
+            network: "low",
+            health: "low"
+        },
+
+        transport: {
+
+            options: [
+                {
+                    type: "Tourist Bus",
+                    fare: "Rs 1,200–1,800",
+                    duration: "10–12 hr"
+                },
+                {
+                    type: "Private Car",
+                    fare: "Rs 8,000–12,000",
+                    duration: "8–9 hr"
+                }
+            ],
+
+            note: "Major highways connect Chitwan with eastern and central Nepal."
+
+        },
 
         image:
             image("Chitwan National Park.jpg"),
@@ -1081,6 +1371,53 @@ const destinations = {
         best:
             "🏯 Culture & Food",
 
+        interests: [
+            "culture",
+            "food",
+            "adventure"
+        ],
+
+        coords: {
+            lat: 27.72,
+            lng: 85.32
+        },
+
+        minDays: 3,
+
+        budget: {
+            transport: 1200,
+            lodging: 2500,
+            food: 1200,
+            activities: 800
+        },
+
+        safetyLevels: {
+            altitude: "low",
+            weather: "medium",
+            road: "high",
+            network: "low",
+            health: "low"
+        },
+
+        transport: {
+
+            options: [
+                {
+                    type: "Tourist Bus",
+                    fare: "Rs 1,200–2,000",
+                    duration: "12–14 hr"
+                },
+                {
+                    type: "Domestic Flight",
+                    fare: "Rs 6,000+",
+                    duration: "1 hr"
+                }
+            ],
+
+            note: "Traffic is the biggest planning issue inside Kathmandu."
+
+        },
+
         image:
             image("Kathmandu Durbar Square, Nepal.JPG"),
 
@@ -1254,6 +1591,54 @@ const destinations = {
 
         best:
             "🏔 Adventure & Culture",
+
+        interests: [
+            "adventure",
+            "culture",
+            "trekking",
+            "hidden"
+        ],
+
+        coords: {
+            lat: 28.78,
+            lng: 83.72
+        },
+
+        minDays: 5,
+
+        budget: {
+            transport: 2000,
+            lodging: 2500,
+            food: 1000,
+            activities: 500
+        },
+
+        safetyLevels: {
+            altitude: "high",
+            weather: "high",
+            road: "high",
+            network: "high",
+            health: "high"
+        },
+
+        transport: {
+
+            options: [
+                {
+                    type: "Road via Pokhara–Jomsom",
+                    fare: "Rs 3,000–5,000",
+                    duration: "multi-day drive"
+                },
+                {
+                    type: "Flight to Jomsom",
+                    fare: "Rs 9,000+",
+                    duration: "25 min + jeep"
+                }
+            ],
+
+            note: "Flights can be delayed or cancelled because of weather."
+
+        },
 
         image:
             image("Mustang,Nepal.jpg"),
@@ -1439,6 +1824,71 @@ const hotelImages = [
 
 
 /* =========================================================
+   STARTING POINTS
+========================================================= */
+
+const startingPoints = {
+
+    Itahari:    { lat: 26.66, lng: 87.27 },
+    Biratnagar: { lat: 26.45, lng: 87.27 },
+    Dharan:     { lat: 26.82, lng: 87.28 },
+    Birtamod:   { lat: 26.63, lng: 87.98 },
+    Kathmandu:  { lat: 27.72, lng: 85.32 },
+    Pokhara:    { lat: 28.21, lng: 83.99 },
+    Birgunj:    { lat: 27.00, lng: 84.87 },
+    Bhairahawa: { lat: 27.51, lng: 83.45 }
+
+};
+
+
+
+/* =========================================================
+   NATIONAL EMERGENCY NUMBERS
+========================================================= */
+
+const nationalEmergency = [
+    {
+        label: "Police",
+        number: "100",
+        icon: "👮"
+    },
+    {
+        label: "Ambulance",
+        number: "102",
+        icon: "🚑"
+    },
+    {
+        label: "Fire Brigade",
+        number: "101",
+        icon: "🚒"
+    },
+    {
+        label: "Tourist Police",
+        number: "1144",
+        icon: "🛡"
+    }
+];
+
+
+
+/* =========================================================
+   INTEREST LABELS
+========================================================= */
+
+const interestLabels = {
+    trekking:   "🥾 Trekking",
+    lakes:      "🌊 Lakes",
+    nature:     "🌿 Nature",
+    culture:    "🏯 Culture",
+    food:       "🍜 Food",
+    adventure:  "🪂 Adventure",
+    hidden:     "💎 Hidden Gems",
+    relaxation: "🌄 Relaxation"
+};
+
+
+
+/* =========================================================
    PAGE NAVIGATION
 ========================================================= */
 
@@ -1506,166 +1956,417 @@ function toggleInterest(button) {
 
 
 /* =========================================================
-   WHEN USER CHANGES DESTINATION
-
-   We hide the previous search result.
-   We do NOT show anything automatically.
-========================================================= */
-
-function destinationChanged() {
-
-    document
-        .getElementById(
-            "searchResult"
-        )
-        .classList
-        .add("hidden");
-
-
-    document
-        .getElementById(
-            "destinationDetails"
-        )
-        .classList
-        .add("hidden");
-
-}
-
-
-
-/* =========================================================
    CURRENT DESTINATION
 ========================================================= */
 
 let currentDestination = "";
+
+let lastTripPlan = null;
 
 
 
 /* =========================================================
    FIND MY TRIP
 
-   STEP 1:
-   Shows ONLY destination card.
+   Scoring engine:
+   - interests match (60%)
+   - budget fit (30%)
+   - duration fit (10%)
 ========================================================= */
 
-function findTrip() {
+function getSelectedInterests() {
 
-    const key =
-        document
-        .getElementById(
-            "destination"
+    const selected = [];
+
+    document
+        .querySelectorAll(
+            ".interest.selected"
         )
-        .value;
+        .forEach(function(btn) {
+
+            selected.push(
+                btn.getAttribute(
+                    "data-interest"
+                )
+            );
+
+        });
+
+    return selected;
+
+}
 
 
-    if (key === "") {
 
-        alert(
-            "Please select a destination first."
-        );
+function parseDuration(durationText) {
 
-        return;
+    const match =
+        String(
+            durationText
+        ).match(/\d+/);
 
-    }
+    return match
+        ? Number(match[0])
+        : 3;
+
+}
 
 
-    currentDestination = key;
 
+function scoreDestination(key, plan) {
 
     const place =
         destinations[key];
 
 
-    const duration =
+    let interestScore = 0.5;
+
+    if (plan.interests.length > 0) {
+
+        let matched = 0;
+
+        plan.interests.forEach(
+            function(interest) {
+
+                if (
+                    place.interests.indexOf(
+                        interest
+                    ) !== -1
+                ) {
+
+                    matched += 1;
+
+                }
+
+            }
+        );
+
+        interestScore =
+            matched / plan.interests.length;
+
+    }
+
+
+    const perDay =
+        (place.budget.transport / plan.days)
+        + place.budget.lodging
+        + place.budget.food
+        + place.budget.activities;
+
+
+    let budgetScore = 0.7;
+
+    if (plan.budget > 0) {
+
+        budgetScore =
+            Math.min(
+                1,
+                plan.budget / perDay
+            );
+
+    }
+
+
+    const durationScore =
+        plan.days >= place.minDays
+        ? 1
+        : plan.days / place.minDays;
+
+
+    const total =
+        (interestScore * 0.6)
+        + (budgetScore * 0.3)
+        + (durationScore * 0.1);
+
+
+    return {
+        key: key,
+        place: place,
+        score: total,
+        budgetScore: budgetScore,
+        perDay: perDay
+    };
+
+}
+
+
+
+function findTrip() {
+
+    const interests =
+        getSelectedInterests();
+
+    const durationText =
         document
-        .getElementById(
-            "duration"
-        )
+        .getElementById("duration")
         .value;
 
+    const days =
+        parseDuration(durationText);
+
+    const starting =
+        document
+        .getElementById("starting")
+        .value;
+
+    const budget =
+        Number(
+            document
+            .getElementById("budget")
+            .value || 0
+        );
+
+
+    const plan = {
+        interests: interests,
+        days: days,
+        starting: starting,
+        budget: budget
+    };
+
+    lastTripPlan = plan;
+
+
+    const scored =
+        Object
+        .keys(destinations)
+        .map(
+            function(key) {
+
+                return scoreDestination(
+                    key,
+                    plan
+                );
+
+            }
+        )
+        .sort(
+            function(a, b) {
+
+                return b.score - a.score;
+
+            }
+        );
+
+
+    renderResults(
+        scored,
+        plan
+    );
 
 
     document
-        .getElementById(
-            "destinationImage"
-        )
-        .src =
-        place.image;
-
-
-    document
-        .getElementById(
-            "destinationImage"
-        )
-        .alt =
-        place.name;
-
-
-    document
-        .getElementById(
-            "destinationCategory"
-        )
-        .textContent =
-        place.category;
-
-
-    document
-        .getElementById(
-            "destinationName"
-        )
-        .textContent =
-        place.name;
-
-
-    document
-        .getElementById(
-            "destinationDescription"
-        )
-        .textContent =
-        place.description;
-
-
-    document
-        .getElementById(
-            "destinationDuration"
-        )
-        .textContent =
-        "🕐 " + duration;
-
-
-    document
-        .getElementById(
-            "destinationBest"
-        )
-        .textContent =
-        place.best;
-
-
-
-    document
-        .getElementById(
-            "searchResult"
-        )
+        .getElementById("searchResult")
         .classList
         .remove("hidden");
 
 
     document
-        .getElementById(
-            "destinationDetails"
-        )
+        .getElementById("destinationDetails")
         .classList
         .add("hidden");
 
 
-
     document
-        .getElementById(
-            "searchResult"
-        )
+        .getElementById("searchResult")
         .scrollIntoView({
             behavior: "smooth"
         });
+
+
+    saveTrip(
+        plan,
+        scored[0].key
+    );
+
+
+    updateShareUrl(
+        plan,
+        scored[0].key
+    );
+
+}
+
+
+
+/* =========================================================
+   RENDER RANKED RESULTS
+========================================================= */
+
+function renderResults(results, plan) {
+
+    const container =
+        document.getElementById(
+            "resultsList"
+        );
+
+
+    container.innerHTML = "";
+
+
+    results.forEach(
+        function(item, index) {
+
+            const reasons = [];
+
+            if (plan.interests.length > 0) {
+
+                const matched =
+                    plan.interests.filter(
+                        function(interest) {
+
+                            return item.place
+                                .interests
+                                .indexOf(interest) !== -1;
+
+                        }
+                    );
+
+                if (matched.length > 0) {
+
+                    reasons.push(
+                        matched
+                        .map(
+                            function(interest) {
+
+                                return interestLabels[interest];
+
+                            }
+                        )
+                        .join(" · ")
+                    );
+
+                }
+
+            } else {
+
+                reasons.push(
+                    "🗺 All destinations considered"
+                );
+
+            }
+
+
+            if (plan.budget > 0) {
+
+                reasons.push(
+                    item.budgetScore >= 1
+                    ? "✅ Within budget"
+                    : "💸 Slightly above budget"
+                );
+
+            }
+
+
+            if (plan.days < item.place.minDays) {
+
+                reasons.push(
+                    "🕐 Best with " +
+                    item.place.minDays +
+                    "+ days"
+                );
+
+            }
+
+
+            container.innerHTML += `
+
+                <div class="result-card">
+
+                    <img
+                        src="${item.place.image}"
+                        alt="${item.place.name}"
+                        loading="lazy"
+                        onerror="imgFallback(this)"
+                    >
+
+                    <div class="result-card-body">
+
+                        <div class="result-card-top">
+
+                            <div>
+
+                                <span class="destination-badge">
+                                    ${item.place.category}
+                                </span>
+
+                                ${
+                                    index === 0
+                                    ? '<span class="best-match-badge">★ Best Match</span>'
+                                    : ""
+                                }
+
+                                <h3>
+                                    ${item.place.name}
+                                </h3>
+
+                                <p>
+                                    ${item.place.description}
+                                </p>
+
+                            </div>
+
+
+                            <div class="result-score">
+
+                                <strong>
+                                    ${Math.round(item.score * 100)}%
+                                </strong>
+
+                                <small>
+                                    MATCH
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="destination-tags">
+
+                            <span>
+                                📍 From ${plan.starting}
+                            </span>
+
+                            <span>
+                                🕐 ${plan.days} Day${plan.days > 1 ? "s" : ""}
+                            </span>
+
+                            <span>
+                                ${item.place.best}
+                            </span>
+
+                            ${
+                                plan.budget > 0
+                                ? `<span>💰 ~NPR ${Math.round(item.perDay).toLocaleString()}/day</span>`
+                                : ""
+                            }
+
+                        </div>
+
+
+                        <div class="match-reasons">
+                            ${reasons.map(function(reason) {
+                                return `<span>${reason}</span>`;
+                            }).join("")}
+                        </div>
+
+
+                        <button
+                            class="open-btn"
+                            onclick="openDestination('${item.key}')"
+                        >
+                            View Full Details →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        }
+    );
 
 }
 
@@ -1674,87 +2375,82 @@ function findTrip() {
 /* =========================================================
    OPEN DESTINATION
 
-   STEP 2:
-   User clicks result card.
-
-   NOW show:
-   - important info
-   - safety
-   - places
-   - accommodation
+   Renders the full details panel for a destination.
 ========================================================= */
 
-function openDestination() {
+function openDestination(key) {
 
-    if (currentDestination === "") {
-
-        return;
-
-    }
-
+    currentDestination = key;
 
     const place =
-        destinations[
-            currentDestination
-        ];
-
+        destinations[key];
 
 
     document
-        .getElementById(
-            "detailsName"
-        )
+        .getElementById("detailsName")
         .textContent =
         place.name +
         " Travel Information";
 
 
     document
-        .getElementById(
-            "detailsIntro"
-        )
+        .getElementById("detailsIntro")
         .textContent =
         place.intro;
-
 
 
     renderImportantInfo(
         place
     );
 
-
-    renderSafety(
-        place.safety,
-        "homeSafety"
+    renderWeather(
+        place
     );
 
+    renderTransport(
+        place
+    );
+
+    renderItinerary(
+        place
+    );
+
+    renderMap(
+        place
+    );
+
+    renderSafety(
+        place,
+        "homeSafety"
+    );
 
     renderPlaces(
         place.places,
         "homePlaces"
     );
 
-
     renderHotels(
         place.hotels,
         "homeHotels"
     );
 
+    renderPacking(
+        place
+    );
+
+    renderEmergency(
+        place
+    );
 
 
     document
-        .getElementById(
-            "destinationDetails"
-        )
+        .getElementById("destinationDetails")
         .classList
         .remove("hidden");
 
 
-
     document
-        .getElementById(
-            "destinationDetails"
-        )
+        .getElementById("destinationDetails")
         .scrollIntoView({
             behavior: "smooth"
         });
@@ -1855,124 +2551,124 @@ function renderImportantInfo(place) {
    SAFETY
 ========================================================= */
 
+function statusLevel(level) {
+
+    if (level === "low") {
+        return { class: "level-low", label: "Low Risk" };
+    }
+
+    if (level === "high") {
+        return { class: "level-high", label: "High Risk" };
+    }
+
+    return { class: "level-medium", label: "Moderate" };
+
+}
+
+
 function renderSafety(
-    safety,
+    place,
     containerName
 ) {
+
+    const safety =
+        place.safety;
+
+    const levels =
+        place.safetyLevels;
+
+    const items = [
+        {
+            icon: "🏔",
+            title: "Altitude",
+            text: safety.altitude,
+            key: "altitude"
+        },
+        {
+            icon: "🌦",
+            title: "Weather",
+            text: safety.weather,
+            key: "weather"
+        },
+        {
+            icon: "🚙",
+            title: "Road & Transport",
+            text: safety.road,
+            key: "road"
+        },
+        {
+            icon: "📶",
+            title: "Mobile Network",
+            text: safety.network,
+            key: "network"
+        },
+        {
+            icon: "🏥",
+            title: "Healthcare",
+            text: safety.health,
+            key: "health"
+        },
+        {
+            icon: "⚠️",
+            title: "Important Precautions",
+            text: safety.precautions,
+            key: "precautions"
+        }
+    ];
+
+
+    const html =
+        items.map(
+            function(item) {
+
+                const level =
+                    statusLevel(
+                        levels[item.key]
+                    );
+
+                const badge =
+                    item.key === "precautions"
+                    ? ""
+                    : `<span class="level-badge ${level.class}">
+                            ${level.label}
+                        </span>`;
+
+                return `
+
+                    <div class="safety-card">
+
+                        <div class="safety-head">
+
+                            <div class="safety-icon">
+                                ${item.icon}
+                            </div>
+
+                            ${badge}
+
+                        </div>
+
+                        <h3>
+                            ${item.title}
+                        </h3>
+
+                        <p>
+                            ${item.text}
+                        </p>
+
+                    </div>
+
+                `;
+
+            }
+        ).join("");
+
 
     document
         .getElementById(
             containerName
         )
-        .innerHTML = `
-
-        <div class="safety-card">
-
-            <div class="safety-icon">
-                🏔
-            </div>
-
-            <h3>
-                Altitude
-            </h3>
-
-            <p>
-                ${safety.altitude}
-            </p>
-
-        </div>
-
-
-
-        <div class="safety-card">
-
-            <div class="safety-icon">
-                🌦
-            </div>
-
-            <h3>
-                Weather
-            </h3>
-
-            <p>
-                ${safety.weather}
-            </p>
-
-        </div>
-
-
-
-        <div class="safety-card">
-
-            <div class="safety-icon">
-                🚙
-            </div>
-
-            <h3>
-                Road & Transport
-            </h3>
-
-            <p>
-                ${safety.road}
-            </p>
-
-        </div>
-
-
-
-        <div class="safety-card">
-
-            <div class="safety-icon">
-                📶
-            </div>
-
-            <h3>
-                Mobile Network
-            </h3>
-
-            <p>
-                ${safety.network}
-            </p>
-
-        </div>
-
-
-
-        <div class="safety-card">
-
-            <div class="safety-icon">
-                🏥
-            </div>
-
-            <h3>
-                Healthcare
-            </h3>
-
-            <p>
-                ${safety.health}
-            </p>
-
-        </div>
-
-
-
-        <div class="safety-card">
-
-            <div class="safety-icon">
-                ⚠️
-            </div>
-
-            <h3>
-                Important Precautions
-            </h3>
-
-            <p>
-                ${safety.precautions}
-            </p>
-
-        </div>
-
-    `;
+        .innerHTML =
+        html;
 
 }
 
@@ -2023,6 +2719,7 @@ function renderPlaces(
                     <img
                         src="${place.image}"
                         alt="${place.name}"
+                        onerror="imgFallback(this)"
                     >
 
 
@@ -2100,6 +2797,7 @@ function renderHotels(
                     <img
                         src="${hotelImages[index]}"
                         alt="${hotel.name}"
+                        onerror="imgFallback(this)"
                     >
 
 
@@ -2141,10 +2839,790 @@ function renderHotels(
 
 
 /* =========================================================
+   IMAGE FALLBACK
+========================================================= */
+
+function imgFallback(img) {
+
+    const placeholder =
+        "https://via.placeholder.com/900x600/0c1631/8e9ab8?text=YatraKhoj";
+
+    if (img.src !== placeholder) {
+        img.src = placeholder;
+    }
+
+}
+
+
+
+/* =========================================================
+   BACKEND API HELPERS
+========================================================= */
+
+const API_BASE =
+    "http://localhost:5000";
+
+
+function apiGet(path, fallback) {
+
+    return fetch(
+        API_BASE + path
+    )
+    .then(function(response) {
+        return response.json();
+    })
+    .catch(function() {
+        return fallback;
+    });
+
+}
+
+
+
+/* =========================================================
+   WEATHER
+========================================================= */
+
+function renderWeather(place) {
+
+    const container =
+        document.getElementById(
+            "homeWeather"
+        );
+
+
+    container.innerHTML = `
+
+        <div class="weather-loading">
+            Loading live weather…
+        </div>
+
+    `;
+
+
+    apiGet(
+        "/api/weather?place=" +
+        encodeURIComponent(place.name),
+        null
+    )
+    .then(function(data) {
+
+        if (
+            !data ||
+            data.success !== true
+        ) {
+
+            container.innerHTML = `
+
+                <div class="weather-offline">
+                    Live weather is unavailable right now.
+                    Start the backend with
+                    <code>node server.js</code> to enable it.
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+
+        const weatherIcon =
+            data.temperature < 12
+            ? "❄️"
+            : data.temperature < 24
+            ? "⛅"
+            : "☀️";
+
+
+        container.innerHTML = `
+
+            <div class="weather-card">
+
+                <div class="weather-icon">
+                    ${weatherIcon}
+                </div>
+
+                <div>
+
+                    <small>
+                        NOW IN ${data.place.toUpperCase()}
+                    </small>
+
+                    <h3>
+                        ${Math.round(data.temperature)}°C
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <div class="weather-stat">
+                <small>FEELS LIKE</small>
+                <strong>${Math.round(data.feelsLike)}°C</strong>
+            </div>
+
+            <div class="weather-stat">
+                <small>HUMIDITY</small>
+                <strong>${Math.round(data.humidity)}%</strong>
+            </div>
+
+            <div class="weather-stat">
+                <small>WIND</small>
+                <strong>${Math.round(data.windSpeed)} km/h</strong>
+            </div>
+
+            <div class="weather-stat">
+                <small>RAIN</small>
+                <strong>${data.precipitation} mm</strong>
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+
+/* =========================================================
+   TRANSPORT
+========================================================= */
+
+function renderTransport(place) {
+
+    const container =
+        document.getElementById(
+            "homeTransport"
+        );
+
+
+    const options =
+        place.transport.options
+        .map(
+            function(option) {
+
+                return `
+
+                    <div class="transport-card">
+
+                        <div class="transport-icon">
+                            🚍
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                ${option.type}
+                            </h3>
+
+                            <div class="transport-meta">
+
+                                <span>
+                                    ⏱ ${option.duration}
+                                </span>
+
+                                <span>
+                                    💰 ${option.fare}
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+            }
+        ).join("");
+
+
+    container.innerHTML =
+        options +
+        `
+
+        <p class="transport-note">
+            💡 ${place.transport.note}
+        </p>
+
+        `;
+
+}
+
+
+
+/* =========================================================
+   ITINERARY
+========================================================= */
+
+function buildItinerary(place, days, starting) {
+
+    const steps = [];
+
+    const places = place.places;
+
+    const totalDays =
+        Math.max(1, days);
+
+    const travelDay =
+        "Travel from " + starting +
+        " to " + place.name + ".";
+
+    const returnDay =
+        "Return journey back to " + starting +
+        ". Carry extra time for road conditions.";
+
+
+    if (totalDays === 1) {
+
+        steps.push({
+            day: 1,
+            title: place.name + " Day Trip",
+            detail:
+                travelDay +
+                " Explore " +
+                places[0].name +
+                " in the morning."
+        });
+
+        steps.push({
+            day: "Return",
+            title: "Head Home",
+            detail: returnDay
+        });
+
+        return steps;
+
+    }
+
+
+    steps.push({
+        day: 1,
+        title: "Arrival & First Stop",
+        detail:
+            travelDay +
+            " Settle in and visit " +
+            places[0].name +
+            "."
+    });
+
+
+    const middleDays =
+        totalDays - 2;
+
+    for (let i = 0; i < middleDays; i += 1) {
+
+        const placeIndex =
+            1 + (i % (places.length - 1));
+
+        const target =
+            places[placeIndex];
+
+        steps.push({
+            day: i + 2,
+            title: "Explore " + target.name,
+            detail:
+                target.text +
+                (i === 0 && middleDays === 1
+                    ? " Spend the evening enjoying local food."
+                    : "")
+        });
+
+    }
+
+
+    const lastPlace =
+        places[places.length - 1];
+
+    steps.push({
+        day: totalDays,
+        title: lastPlace.name + " & Departure",
+        detail:
+            "Visit " +
+            lastPlace.name +
+            " before starting your journey back to " +
+            starting + "."
+    });
+
+
+    return steps;
+
+}
+
+
+
+function renderItinerary(place) {
+
+    const container =
+        document.getElementById(
+            "homeItinerary"
+        );
+
+
+    const plan =
+        lastTripPlan
+        ? lastTripPlan
+        : {
+            days: parseDuration(
+                document
+                .getElementById("duration")
+                .value || "3 Days"
+            ),
+            starting:
+                document
+                .getElementById("starting")
+                .value || "Itahari"
+        };
+
+
+    const steps =
+        buildItinerary(
+            place,
+            plan.days,
+            plan.starting
+        );
+
+
+    container.innerHTML =
+        steps.map(
+            function(step) {
+
+                return `
+
+                    <div class="itinerary-item">
+
+                        <div class="itinerary-day">
+                            ${step.day}
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                ${step.title}
+                            </h3>
+
+                            <p>
+                                ${step.detail}
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+            }
+        ).join("");
+
+}
+
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+let activeMap = null;
+
+
+function renderMap(place) {
+
+    const container =
+        document.getElementById(
+            "homeMap"
+        );
+
+
+    const lat = place.coords.lat;
+
+    const lng = place.coords.lng;
+
+
+    container.innerHTML = `
+
+        <div id="leafletMap"
+            class="leaflet-box"
+        >
+        </div>
+
+        <a
+            class="map-open-link"
+            href="https://www.google.com/maps?q=${lat},${lng}"
+            target="_blank"
+            rel="noopener"
+        >
+            Open in Google Maps ↗
+        </a>
+
+    `;
+
+
+    if (typeof L === "undefined") {
+
+        container.querySelector(
+            ".leaflet-box"
+        ).innerHTML =
+            '<div class="map-unavailable">Map library could not load.</div>';
+
+        return;
+
+    }
+
+
+    if (activeMap) {
+
+        activeMap.remove();
+
+        activeMap = null;
+
+    }
+
+
+    const map =
+        L.map("leafletMap").setView(
+            [lat, lng],
+            11
+        );
+
+    activeMap = map;
+
+
+    L.tileLayer(
+        "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+        {
+            attribution:
+                '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/">CARTO</a>',
+            subdomains: "abcd",
+            maxZoom: 19
+        }
+    ).addTo(map);
+
+
+    L.marker([lat, lng])
+        .addTo(map)
+        .bindPopup(
+            "<strong>" + place.name + "</strong><br>" +
+            place.description
+        )
+        .openPopup();
+
+}
+
+
+
+/* =========================================================
+   PACKING CHECKLIST
+========================================================= */
+
+function buildPackingList(place) {
+
+    const items = [
+        "ID / travel documents",
+        "Cash (small notes)",
+        "Water bottle",
+        "Power bank & charger",
+        "Basic first-aid & medicines"
+    ];
+
+
+    if (place.important.carry) {
+
+        place.important.carry
+            .split(",")
+            .forEach(function(item) {
+
+                const clean =
+                    item.trim().replace(/\.$/, "");
+
+                if (clean && items.indexOf(clean) === -1) {
+                    items.push(clean);
+                }
+
+            });
+
+    }
+
+
+    const altitudeLevel =
+        place.safetyLevels.altitude;
+
+    const roadLevel =
+        place.safetyLevels.road;
+
+    const weatherLevel =
+        place.safetyLevels.weather;
+
+
+    if (altitudeLevel === "high") {
+
+        items.push(
+            "Warm layers",
+            "Wool cap & gloves"
+        );
+
+    } else if (altitudeLevel === "medium") {
+
+        items.push("Warm layer");
+
+    }
+
+
+    if (roadLevel === "high") {
+
+        items.push(
+            "Travel insurance",
+            "First-aid kit"
+        );
+
+    }
+
+
+    if (weatherLevel === "high") {
+
+        items.push("Rain protection");
+    }
+
+
+    return items;
+
+}
+
+
+
+function renderPacking(place) {
+
+    const container =
+        document.getElementById(
+            "homePacking"
+        );
+
+
+    const items =
+        buildPackingList(place);
+
+
+    container.innerHTML =
+        items
+        .map(
+            function(item, index) {
+
+                return `
+
+                    <label class="pack-item">
+
+                        <input type="checkbox"
+                            ${index === 0 ? "checked" : ""}
+                        >
+
+                        <span>
+                            ${item}
+                        </span>
+
+                    </label>
+
+                `;
+
+            }
+        ).join("");
+
+}
+
+
+
+/* =========================================================
+   EMERGENCY CONTACTS
+========================================================= */
+
+function renderEmergency(place) {
+
+    const container =
+        document.getElementById(
+            "homeEmergency"
+        );
+
+
+    const hotlines =
+        nationalEmergency
+        .map(
+            function(item) {
+
+                return `
+
+                    <div class="emergency-card">
+
+                        <div class="emergency-icon">
+                            ${item.icon}
+                        </div>
+
+                        <div>
+
+                            <small>
+                                ${item.label}
+                            </small>
+
+                            <a href="tel:${item.number}">
+                                ${item.number}
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+            }
+        ).join("");
+
+
+    container.innerHTML =
+        hotlines +
+        `
+
+        <div class="emergency-card emergency-note">
+
+            <div class="emergency-icon">
+                🏥
+            </div>
+
+            <div>
+
+                <small>
+                    HEALTH NOTE
+                </small>
+
+                <p>
+                    ${place.safety.health}
+                </p>
+
+            </div>
+
+        </div>
+
+        `;
+
+}
+
+
+
+/* =========================================================
    DISCOVER PAGE
 ========================================================= */
 
 function loadDiscover() {
+
+    loadDiscoverFilters();
+
+    renderDiscoverGrid();
+
+}
+
+
+
+let discoverActiveFilter = "all";
+
+
+
+function loadDiscoverFilters() {
+
+    const container =
+        document.getElementById(
+            "discoverFilters"
+        );
+
+
+    container.innerHTML = "";
+
+
+    const filters = [
+        "all",
+        "trekking",
+        "lakes",
+        "nature",
+        "culture",
+        "food",
+        "adventure",
+        "hidden",
+        "relaxation"
+    ];
+
+
+    filters.forEach(
+        function(filter) {
+
+            const label =
+                filter === "all"
+                ? "All"
+                : interestLabels[filter];
+
+            container.innerHTML += `
+
+                <button
+                    class="filter-chip
+                        ${
+                            filter === discoverActiveFilter
+                            ? "active"
+                            : ""
+                        }
+                    "
+                    data-filter="${filter}"
+                    onclick="setDiscoverFilter('${filter}', this)"
+                >
+                    ${label}
+                </button>
+
+            `;
+
+        }
+    );
+
+}
+
+
+
+function setDiscoverFilter(
+    filter,
+    button
+) {
+
+    discoverActiveFilter = filter;
+
+
+    document
+        .querySelectorAll(
+            "#discoverFilters .filter-chip"
+        )
+        .forEach(
+            function(btn) {
+
+                btn.classList.remove("active");
+
+            }
+        );
+
+
+    if (button) {
+
+        button.classList.add("active");
+
+    }
+
+
+    renderDiscoverGrid();
+
+}
+
+
+
+function applyDiscoverFilters() {
+
+    renderDiscoverGrid();
+
+}
+
+
+
+function renderDiscoverGrid() {
 
     const container =
         document.getElementById(
@@ -2155,56 +3633,94 @@ function loadDiscover() {
     container.innerHTML = "";
 
 
+    const query =
+        (
+            document
+            .getElementById("discoverSearch")
+            .value || ""
+        )
+        .toLowerCase()
+        .trim();
 
-    Object.keys(
-        destinations
-    )
-    .forEach(function(key) {
 
-        const place =
-            destinations[key];
+    Object
+        .keys(destinations)
+        .forEach(function(key) {
+
+            const place =
+                destinations[key];
 
 
-        container.innerHTML += `
+            if (
+                discoverActiveFilter !== "all" &&
+                place.interests.indexOf(
+                    discoverActiveFilter
+                ) === -1
+            ) {
 
-            <div
-                class="discover-card"
-                onclick="
-                    openDiscover('${key}')
-                "
-            >
+                return;
 
-                <img
-                    src="${place.image}"
-                    alt="${place.name}"
+            }
+
+
+            if (
+                query &&
+                (
+                    place.name +
+                    " " +
+                    place.category
+                )
+                .toLowerCase()
+                .indexOf(query) === -1
+            ) {
+
+                return;
+
+            }
+
+
+            container.innerHTML += `
+
+                <div
+                    class="discover-card"
+                    onclick="
+                        openDiscover('${key}')
+                    "
                 >
 
+                    <img
+                        src="${place.image}"
+                        alt="${place.name}"
+                        loading="lazy"
+                        onerror="imgFallback(this)"
+                    >
 
-                <div class="discover-overlay">
+
+                    <div class="discover-overlay">
+                    </div>
+
+
+                    <div class="discover-info">
+
+                        <span>
+                            ${place.category}
+                        </span>
+
+                        <h3>
+                            ${place.name}
+                        </h3>
+
+                        <p>
+                            ${place.best}
+                        </p>
+
+                    </div>
+
                 </div>
 
+            `;
 
-                <div class="discover-info">
-
-                    <span>
-                        ${place.category}
-                    </span>
-
-                    <h3>
-                        ${place.name}
-                    </h3>
-
-                    <p>
-                        ${place.best}
-                    </p>
-
-                </div>
-
-            </div>
-
-        `;
-
-    });
+        });
 
 }
 
@@ -2389,6 +3905,7 @@ function showGuide(
                 <img
                     src="${place.image}"
                     alt="${place.name}"
+                    onerror="imgFallback(this)"
                 >
 
 
@@ -2524,7 +4041,7 @@ function loadSafetyPage() {
 
 
     renderSafety(
-        place.safety,
+        place,
         "safetyGrid"
     );
 
@@ -2536,7 +4053,7 @@ function loadSafetyPage() {
    CURRENCY
 ========================================================= */
 
-const currencyRates = {
+const currencyRatesFallback = {
 
     USD: 139.50,
 
@@ -2551,6 +4068,101 @@ const currencyRates = {
     MYR: 32.80
 
 };
+
+
+let liveCurrencyRates = null;
+
+
+function loadLiveCurrency() {
+
+    const codes =
+        Object.keys(
+            currencyRatesFallback
+        );
+
+
+    const pending =
+        codes.map(
+            function(code) {
+
+                return apiGet(
+                    "/api/currency?from=" +
+                    code +
+                    "&to=NPR&amount=1",
+                    null
+                )
+                .then(
+                    function(data) {
+
+                        if (
+                            data &&
+                            data.success &&
+                            data.rate
+                        ) {
+
+                            return {
+                                code: code,
+                                rate: data.rate
+                            };
+
+                        }
+
+                        return null;
+
+                    }
+                );
+
+            }
+        );
+
+
+    Promise
+        .all(pending)
+        .then(function(results) {
+
+            const map = {};
+
+            let ok = 0;
+
+            results.forEach(function(result) {
+
+                if (result) {
+
+                    map[result.code] = result.rate;
+
+                    ok += 1;
+
+                }
+
+            });
+
+
+            if (ok === codes.length) {
+
+                liveCurrencyRates = map;
+
+            }
+
+
+            convertCurrency();
+
+        });
+
+}
+
+
+
+function getRate(currency) {
+
+    if (liveCurrencyRates) {
+
+        return liveCurrencyRates[currency];
+
+    }
+
+    return currencyRatesFallback[currency];
+
+}
 
 
 
@@ -2585,9 +4197,7 @@ function convertCurrency() {
 
 
     const rate =
-        currencyRates[
-            currency
-        ];
+        getRate(currency);
 
 
     const result =
@@ -2619,7 +4229,633 @@ function convertCurrency() {
         "1 " +
         currency +
         " ≈ NPR " +
-        rate;
+        rate +
+        (liveCurrencyRates ? " · Live" : " · Demo");
+
+
+
+    const warning =
+        document.querySelector(
+            ".demo-warning"
+        );
+
+    if (warning) {
+
+        warning.textContent =
+            liveCurrencyRates
+            ? "Live exchange rates via open.er-api.com."
+            : "Using demo rates. Start the backend (node server.js) for live rates.";
+
+    }
+
+}
+
+
+
+/* =========================================================
+   LANGUAGE TOGGLE
+========================================================= */
+
+const uiDict = {
+
+    en: {
+        navHome: "⌂ Find Your Trip",
+        navDiscover: "⌖ Discover Places",
+        navGuides: "☷ Travel Guides",
+        navSafety: "🛡 Safety Info",
+        navCurrency: "₨ Currency Converter",
+        navAbout: "◎ About Us",
+        langBtn: "🇳🇵 नेपाली"
+    },
+
+    ne: {
+        navHome: "⌂ आफ्नो यात्रा खोज्नुहोस्",
+        navDiscover: "⌖ स्थानहरू पत्ता लगाउनुहोस्",
+        navGuides: "☷ यात्रा गाइड",
+        navSafety: "🛡 सुरक्षा जानकारी",
+        navCurrency: "₨ मुद्रा परिवर्तक",
+        navAbout: "◎ हाम्रो बारेमा",
+        langBtn: "🇬🇧 English"
+    }
+
+};
+
+
+let currentLang = "en";
+
+
+function setLanguage(lang) {
+
+    currentLang = lang;
+
+    localStorage.setItem(
+        "yk-lang",
+        lang
+    );
+
+
+    const dict =
+        uiDict[lang];
+
+
+    document
+        .querySelectorAll("[data-i18n]")
+        .forEach(function(el) {
+
+            const key =
+                el.getAttribute(
+                    "data-i18n"
+                );
+
+            if (dict[key]) {
+
+                el.textContent =
+                    dict[key];
+
+            }
+
+        });
+
+}
+
+
+
+const translateCache = {};
+
+
+function translateText(text, to) {
+
+    if (
+        !text ||
+        typeof text !== "string" ||
+        !text.trim()
+    ) {
+
+        return Promise.resolve(text);
+
+    }
+
+
+    const key =
+        to + "::" + text;
+
+    if (translateCache[key]) {
+
+        return Promise.resolve(
+            translateCache[key]
+        );
+
+    }
+
+
+    return fetch(
+        API_BASE + "/api/translate",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                text: text,
+                to: to
+            })
+        }
+    )
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+
+        const out =
+            data && data.success
+            ? data.translated
+            : text;
+
+        translateCache[key] = out;
+
+        return out;
+
+    })
+    .catch(function() {
+        return text;
+    });
+
+}
+
+
+
+function translateContent() {
+
+    if (currentLang !== "ne") {
+
+        return;
+
+    }
+
+    const selectors =
+        "#detailsName, #detailsIntro, " +
+        ".info-card strong, " +
+        ".place-body h3, .place-body p, " +
+        ".hotel-body h3, .hotel-body p, " +
+        ".safety-card h3, .safety-card p, " +
+        ".transport-card h3";
+
+
+    document
+        .querySelectorAll(selectors)
+        .forEach(function(el) {
+
+            if (el.dataset.i18nOriginal === undefined) {
+
+                el.dataset.i18nOriginal =
+                    el.textContent;
+
+            }
+
+            const original =
+                el.dataset.i18nOriginal;
+
+            if (
+                el.dataset.i18nTranslated !== "1" &&
+                original &&
+                original.trim()
+            ) {
+
+                translateText(original, "ne")
+                    .then(function(translated) {
+
+                        if (
+                            el &&
+                            el.isConnected &&
+                            currentLang === "ne"
+                        ) {
+
+                            el.textContent =
+                                translated;
+
+                            el.dataset.i18nTranslated =
+                                "1";
+
+                        }
+
+                    });
+
+            }
+
+        });
+
+}
+
+
+
+function restoreContent() {
+
+    document
+        .querySelectorAll("[data-i18n-original]")
+        .forEach(function(el) {
+
+            el.textContent =
+                el.dataset.i18nOriginal;
+
+            delete el.dataset.i18nTranslated;
+
+        });
+
+}
+
+
+
+function toggleLanguage() {
+
+    if (currentLang === "en") {
+
+        setLanguage("ne");
+
+        translateContent();
+
+    } else {
+
+        setLanguage("en");
+
+        restoreContent();
+
+    }
+
+}
+
+
+
+/* =========================================================
+   SAVED TRIPS
+========================================================= */
+
+const TRIPS_KEY = "yk-trips";
+
+
+function getSavedTrips() {
+
+    try {
+
+        return (
+            JSON.parse(
+                localStorage.getItem(
+                    TRIPS_KEY
+                )
+            ) || []
+        );
+
+    } catch (error) {
+
+        return [];
+
+    }
+
+}
+
+
+
+function saveTrip(plan, topKey) {
+
+    const trips =
+        getSavedTrips();
+
+    const entry = {
+        key: topKey,
+        starting: plan.starting,
+        days: plan.days,
+        budget: plan.budget,
+        interests: plan.interests,
+        savedAt: new Date().toISOString()
+    };
+
+
+    trips.unshift(entry);
+
+
+    const unique = [];
+
+    const seen = {};
+
+    trips.forEach(function(trip) {
+
+        const id =
+            trip.key +
+            trip.starting +
+            trip.days;
+
+        if (!seen[id]) {
+
+            seen[id] = true;
+
+            unique.push(trip);
+
+        }
+
+    });
+
+
+    localStorage.setItem(
+        TRIPS_KEY,
+        JSON.stringify(unique.slice(0, 12))
+    );
+
+}
+
+
+
+function openMyTrips() {
+
+    const panel =
+        document.getElementById(
+            "myTripsPanel"
+        );
+
+
+    panel.classList.toggle("hidden");
+
+
+    if (!panel.classList.contains("hidden")) {
+
+        renderTrips();
+
+    }
+
+
+    panel.scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+
+function renderTrips() {
+
+    const container =
+        document.getElementById(
+            "tripsList"
+        );
+
+
+    container.innerHTML = "";
+
+
+    const trips =
+        getSavedTrips();
+
+
+    if (trips.length === 0) {
+
+        container.innerHTML = `
+
+            <p class="trips-empty">
+                No saved trips yet. Run "Find My Trip"
+                to save one to this device.
+            </p>
+
+        `;
+
+        return;
+
+    }
+
+
+    trips.forEach(function(trip) {
+
+        const place =
+            destinations[trip.key];
+
+        if (!place) {
+
+            return;
+
+        }
+
+        container.innerHTML += `
+
+            <div class="trip-saved-card">
+
+                <img
+                    src="${place.image}"
+                    alt="${place.name}"
+                    onerror="imgFallback(this)"
+                >
+
+                <div class="trip-saved-body">
+
+                    <h3>
+                        ${place.name}
+                    </h3>
+
+                    <p>
+                        📍 ${trip.starting}
+                        · 🕐 ${trip.days} Day${trip.days > 1 ? "s" : ""}
+                        ${
+                            trip.budget
+                            ? " · 💰 NPR " + trip.budget + "/day"
+                            : ""
+                        }
+                    </p>
+
+                    <p class="trip-date">
+                        Saved ${new Date(trip.savedAt).toLocaleDateString()}
+                    </p>
+
+                    <button
+                        class="open-btn"
+                        onclick="restoreTrip(
+                            '${trip.key}',
+                            '${trip.starting}',
+                            '${trip.days}',
+                            '${trip.budget}'
+                        )"
+                    >
+                        Open Trip →
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+
+function restoreTrip(
+    key,
+    starting,
+    days,
+    budget
+) {
+
+    document
+        .getElementById("starting")
+        .value =
+        starting || "Itahari";
+
+
+    document
+        .getElementById("duration")
+        .value =
+        days + " Day" + (days > 1 ? "s" : "");
+
+
+    if (budget) {
+
+        document
+            .getElementById("budget")
+            .value =
+            budget;
+
+    }
+
+
+    lastTripPlan = {
+        interests: [],
+        days: Number(days || 3),
+        starting: starting || "Itahari",
+        budget: Number(budget || 0)
+    };
+
+
+    openDestination(key);
+
+}
+
+
+
+/* =========================================================
+   SHAREABLE URL
+========================================================= */
+
+function updateShareUrl(plan, topKey) {
+
+    const params =
+        new URLSearchParams();
+
+    params.set("start", plan.starting);
+
+    params.set("days", plan.days);
+
+    if (plan.budget) {
+
+        params.set("budget", plan.budget);
+
+    }
+
+    if (plan.interests.length) {
+
+        params.set("i", plan.interests.join(","));
+
+    }
+
+    params.set("r", topKey);
+
+
+    history.replaceState(
+        null,
+        "",
+        location.pathname + "?" + params.toString()
+    );
+
+}
+
+
+
+function restoreFromUrl() {
+
+    const params =
+        new URLSearchParams(
+            location.search
+        );
+
+
+    const start =
+        params.get("start");
+
+    const days =
+        params.get("days");
+
+    const budget =
+        params.get("budget");
+
+    const interests =
+        params.get("i");
+
+    const result =
+        params.get("r");
+
+
+    if (!start && !days && !result) {
+
+        return;
+
+    }
+
+
+    if (start) {
+
+        document
+            .getElementById("starting")
+            .value =
+            start;
+
+    }
+
+
+    if (days) {
+
+        document
+            .getElementById("duration")
+            .value =
+            days + " Day" + (Number(days) > 1 ? "s" : "");
+
+    }
+
+
+    if (budget) {
+
+        document
+            .getElementById("budget")
+            .value =
+            budget;
+
+    }
+
+
+    if (interests) {
+
+        const list =
+            interests.split(",");
+
+        document
+            .querySelectorAll(".interest")
+            .forEach(function(btn) {
+
+                if (
+                    list.indexOf(
+                        btn.getAttribute("data-interest")
+                    ) !== -1
+                ) {
+
+                    btn.classList.add("selected");
+
+                }
+
+            });
+
+    }
+
+
+    if (result && destinations[result]) {
+
+        findTrip();
+
+    }
 
 }
 
@@ -2631,6 +4867,16 @@ function convertCurrency() {
 
 function startWebsite() {
 
+    const savedLang =
+        localStorage.getItem("yk-lang");
+
+    if (savedLang) {
+
+        setLanguage(savedLang);
+
+    }
+
+
     loadDiscover();
 
     loadGuideButtons();
@@ -2639,7 +4885,12 @@ function startWebsite() {
 
     convertCurrency();
 
+    loadLiveCurrency();
+
+    restoreFromUrl();
+
 }
 
 
 startWebsite();
+
