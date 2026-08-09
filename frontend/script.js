@@ -2190,11 +2190,7 @@ function showPage(pageName, button) {
 
         }, 150);
 
-    } else if (pageName === "insights") {
-
-        loadTrends();
-
-    }
+    } 
 
 }
 
@@ -5103,7 +5099,6 @@ const uiDict = {
         navDiscover: "⌖ Discover Places",
         navGuides: "☷ Travel Guides",
         navSafety: "🛡 Safety Info",
-        navInsights: "📊 Nepal in Numbers",
         navCurrency: "₨ Currency Converter",
         navAbout: "◎ About Us",
         langBtn: "🇳🇵 नेपाली"
@@ -5114,7 +5109,6 @@ const uiDict = {
         navDiscover: "⌖ स्थानहरू पत्ता लगाउनुहोस्",
         navGuides: "☷ यात्रा गाइड",
         navSafety: "🛡 सुरक्षा जानकारी",
-        navInsights: "📊 नेपाल संख्यामा",
         navCurrency: "₨ मुद्रा परिवर्तक",
         navAbout: "◎ हाम्रो बारेमा",
         langBtn: "🇬🇧 English"
