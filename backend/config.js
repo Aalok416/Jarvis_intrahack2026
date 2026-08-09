@@ -1,0 +1,46 @@
+/* =========================================================
+   YatraKhoj — Server Configuration
+   Reads environment variables with sensible local defaults.
+   Copy .env.example to .env and fill in real values.
+   NEVER commit .env to the repository.
+========================================================= */
+
+const fs = require("fs");
+const path = require("path");
+
+const ENV_FILE = path.join(__dirname, ".env");
+
+if (fs.existsSync(ENV_FILE)) {
+    fs.readFileSync(ENV_FILE, "utf8")
+        .split(/\r?\n/)
+        .forEach(function(line) {
+            const trimmed = line.trim();
+            if (!trimmed || trimmed.startsWith("#")) return;
+            const eq = trimmed.indexOf("=");
+            if (eq === -1) return;
+            const key = trimmed.slice(0, eq).trim();
+            const value = trimmed.slice(eq + 1).trim().replace(/^["']|["']$/g, "");
+            if (!process.env[key]) process.env[key] = value;
+        });
+}
+
+module.exports = {
+    port: Number(process.env.PORT || 5000),
+
+    // Google OAuth — create at https://console.cloud.google.com/apis/credentials
+    googleClientId: process.env.GOOGLE_CLIENT_ID || "",
+    googleClientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
+    googleRedirectUri:
+        process.env.GOOGLE_REDIRECT_URI ||
+        function() {
+            return "http://localhost:" + (process.env.PORT || 5000) + "/api/auth/google/callback";
+        }(),
+
+    // Used to sign nothing (sessions are random server tokens) but required
+    // to enable demo mode when real Google keys are missing.
+    allowDemoLogin: String(process.env.ALLOW_DEMO_LOGIN || "true") === "true",
+
+    sessionTtlMs: 7 * 24 * 60 * 60 * 1000, // 7 days
+
+    bodyLimitBytes: 100 * 1024 // 100 KB
+};
